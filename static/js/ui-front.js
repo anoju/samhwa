@@ -284,7 +284,7 @@ var headerUI = function(){
 
 var footerUI = function(){
 	//푸터 하단 고정을 위해 container에 min-height 값부여
-	$(window).on('resize',function(){
+	$(window).on('resize load',function(){
 		var $winH = $(window).height(),
 			$headerH = $('#header').outerHeight(),
 			$footerH = $('#footer').outerHeight(),
