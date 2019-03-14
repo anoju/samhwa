@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* ==========================================================================
+   font
+   ========================================================================== */
+
+/* 한글 : font-family: 'Noto Sans KR';*/
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css); 
+
+/* 중문 : font-family:'Noto Sans SC';*/
+@import url(http://fonts.googleapis.com/earlyaccess/notosanssc.css);
+
+/* 영문 : font-family:'Montserrat';*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+.f_mont{font-family:'Montserrat';}
