@@ -44,16 +44,16 @@ $(document).ready(function(){
 
 	wordCount();
 	priceTextChange();
-	
-
-	
+		
 	if($('.ui-split-text').length > 0)splitText('.ui-split-text');
 	if($('.ui-typing-text').length > 0)typingTextInit();
 	if($('.ui-roll-number').length > 0)rollingNumberInit();
 	if($('.ui-countup').length > 0)countUpInit('.ui-countup');
 	if($('.ui-countuplist').length > 0)countUpListInit('.ui-countuplist');
 	
-	$(window).resize();
+	$(window).load(function(){
+		$(window).resize();
+	});
 });
 
 var preLoading = function(){
@@ -284,22 +284,20 @@ var headerUI = function(){
 
 var footerUI = function(){
 	//푸터 하단 고정을 위해 container에 min-height 값부여
-	if($('#container').length > 0 && $('#footer').length > 0){
-		$(window).on('resize',function(){
-			var $winH = $(window).height(),
-				$headerH = $header.outerHeight(),
-				$footerH = $('#footer').outerHeight(),
-				$container= $('#container');
+	$(window).on('resize',function(){
+		var $winH = $(window).height(),
+			$headerH = $('#header').outerHeight(),
+			$footerH = $('#footer').outerHeight(),
+			$container= $('#container');
 
-			$container.removeAttr('style');
-			var $containerH = $container.outerHeight(),
-				$minHeight = $winH-$headerH-$footerH;
+		$container.removeAttr('style');
+		var $containerH = $container.outerHeight(),
+			$minHeight = $winH-$headerH-$footerH;
 
-			if($minHeight > $containerH){
-				$container.css('min-height',$minHeight); //#container의 height 보다 클때만 min-height 부여
-			}
-		});
-	}
+		if($minHeight > $containerH){
+			$container.css('min-height',$minHeight); //#container의 height 보다 클때만 min-height 부여
+		}
+	});
 
 	//btnTop
 	$('#btnTop').on('click',function(e){
