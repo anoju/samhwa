@@ -284,7 +284,7 @@ var headerUI = function(){
 
 var footerUI = function(){
 	//푸터 하단 고정을 위해 container에 min-height 값부여
-	$(window).on('resize load',function(){
+	/*$(window).on('resize load',function(){
 		var $winH = $(window).height(),
 			$headerH = $('#header').outerHeight(),
 			$footerH = $('#footer').outerHeight(),
@@ -297,7 +297,7 @@ var footerUI = function(){
 		if($minHeight > $containerH){
 			$container.css('min-height',$minHeight); //#container의 height 보다 클때만 min-height 부여
 		}
-	});
+	});*/
 
 	//btnTop
 	$('#btnTop').on('click',function(e){
