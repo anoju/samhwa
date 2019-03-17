@@ -182,6 +182,8 @@ a.grayscale:hover img, a.grayscale:focus img, a.grayscale:active img{
 	-o-filter:none;
 	-webkit-filter:none;}
 
+.ui-widget{font-family:inherit;}
+
 /* ==========================================================================
    Print styles.
    ========================================================================== */
