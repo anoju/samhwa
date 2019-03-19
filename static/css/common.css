@@ -183,6 +183,16 @@ a.grayscale:hover img, a.grayscale:focus img, a.grayscale:active img{
 	-webkit-filter:none;}
 
 .ui-widget{font-family:inherit;}
+.paging {font-family: 'Montserrat';clear:both;margin-top:3em;text-align:center;}
+.paging a{display:inline-block;padding: 0 11px;vertical-align: top;font-size: 16px;line-height: 26px;}
+.paging .btn span {font-size: 0;display: inline-block; width: 15px; height:16px;background: url(../images/common/paging_fst.png)0 0 no-repeat; background-size: cover;    color: transparent;vertical-align: text-top;}
+.paging .btn.btn_fst {padding-left: 0;}
+.paging .btn.btn_last {padding-right: 0;}
+.paging .btn.btn_prev span {background-image: url(../images/common/paging_prev.png);}
+.paging .btn.btn_next span {background-image: url(../images/common/paging_next.png);}
+.paging .btn.btn_last span {background-image: url(../images/common/paging_last.png);}
+.paging>span {display: inline-block;}
+.paging>span a {margin: 0 1px;}
 
 /* ==========================================================================
    Print styles.

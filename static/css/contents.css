@@ -34,8 +34,6 @@
 .search_opt .t_link2{vertical-align:top;}
 
 .iframe{margin-top:60px;height:1000px;}
-
-
 .faq_list{border:1px solid #333;border-width:1px 0;margin-top: 3em;}
 .faq_list > li + li{border-top:1px solid #ddd;}
 .faq_list > li > a{display:block;position:relative;padding:1.125em 1.5em 1.125em 3em;}
@@ -43,3 +41,35 @@
 .faq_list > li.on > a{font-weight:bold;color:#000;}
 .faq_list > li > div{display:none;position:relative;padding: 1.125em 1.5em 1.125em 3em;background: #f1f1f1;border-top:1px solid #ccc;color:#333333;}
 .faq_list > li > div:before{content:'A';display:block;position:absolute;top:1.142em;left:0.714em;font-weight:bold;width: 30px; height:30px; color: #fff; background: #bb141a; border-radius:50%;font-size: 14px;line-height: 29px;text-indent:11px;}
+
+/* 뉴스 */
+.news_list li {padding: 30px 0 ;position:relative;}
+.news_list li > div {padding-left:97px ;position:relative;}
+.news_list li > div p { height:2.7em;display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;text-overflow:ellipsis; }
+.news_list li .tit {margin-bottom: 18px;}
+.news_list li .tit p {font-size: 16px;color: #404040;}
+.news_list li .sub_tit p {font-size: 14px;color: #808080; }
+.news_list li .img_box {margin-bottom: 27px;}
+.list_link {position: absolute;display: block;left: 0;top: 0;right: 0;bottom: 0;font-size: 0;color: transparent;}
+.box_cate {display:inline-block;border:1px solid ; height:40px; line-height: 38px; padding:0 15px;font-size: 13px;}
+.box_cate.beige {border-color:#bf8c4f; color: #bf8c4f;}
+.box_cate.green {border-color:#6eb548; color: #6eb548;}
+.box_cate.blue {border-color:#4f6acd; color: #4f6acd;}
+span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
+.news_list .box_cate,.news_list .date {position:absolute;top:3px;left:0}
+.news_list .date {display: block; width: 76px;text-align: center;top:0;}
+.news_view {padding-top: 60px;}
+.news_view .top_area {margin-bottom:30px ;}
+.news_view .img_box {margin-bottom: 27px;}
+.news_view h3 {font-weight: normal;padding-left: 97px;position:relative;margin-bottom: 18px;color: #404040;}
+.news_view .box_cate {position:absolute;top:3px;left:0}
+.news_view .cont {color: #808080;}
+
+/* 게시판 */
+.board_list li {position:relative;display: table;padding: 30px 0; border-bottom: 1px solid #e6e6e6;width: 100%;;}
+.board_list li > div {display: table-cell;vertical-align: top}
+.board_list li > div:first-child {width: 42px;color: #b2b2b2;font-family:  'Montserrat';padding-top: 2px;}
+.board_list li > div.notice {color:#fa2c40 ;font-family: inherit;}
+.board_list li h3 {font-weight: normal;color: #404040;}
+
+
