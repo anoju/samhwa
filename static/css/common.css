@@ -192,7 +192,8 @@ a.grayscale:hover img, a.grayscale:focus img, a.grayscale:active img{
 .paging .btn.btn_next span {background-image: url(../images/common/paging_next.png);}
 .paging .btn.btn_last span {background-image: url(../images/common/paging_last.png);}
 .paging>span {display: inline-block;}
-.paging>span a {margin: 0 1px;}
+.paging>span a {margin: 0 1px;color:#b2b2b2;}
+.paging>span strong {color:#222}
 
 /* ==========================================================================
    Print styles.
