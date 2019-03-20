@@ -45,7 +45,7 @@
 /* 뉴스 */
 .news_list li {padding: 30px 0 ;position:relative;}
 .news_list li > div {padding-left:97px ;position:relative;}
-.news_list li > div p { height:2.7em;display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;text-overflow:ellipsis; }
+.news_list li > div p { height:41px;display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;text-overflow:ellipsis; }
 .news_list li .tit {margin-bottom: 18px;}
 .news_list li .tit p {font-size: 16px;color: #404040;}
 .news_list li .sub_tit p {font-size: 14px;color: #808080; }
@@ -96,6 +96,18 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
 .social_area .thumbnail_list li.blog:after {background: url(../images/contents/ico_blog.png)0 0 no-repeat; background-size:cover;}
 .social_area .thumbnail_list li img {width: 100%;height:100%;}
 
+/* 페인트아이디어 */
+.idea_area ul {padding-top: 60px;}
+.idea_area li {position:relative;padding-bottom:60px;}
+.idea_area li:last-child {padding-bottom: 0;}
+.idea_area li h3 {padding-top: 20px;font-size: 18px; color: #404040; height:70px;display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;text-overflow:ellipsis;}
+.idea_view {padding-top: 60px;}
+
+.idea_view .top_area {margin-bottom: 29px;position:relative;}
+.idea_view .top_area.notice {padding-left: 42px;}
+.idea_view .top_area div {display: none;}
+.idea_view .top_area.notice div {display: block; position:absolute;top:0;left:0;color: #fa2c40;}
+.idea_view .top_area h3 {font-weight: normal;color:#404040}
 
 
 
