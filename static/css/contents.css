@@ -43,7 +43,7 @@
 .faq_list > li > div:before{content:'A';display:block;position:absolute;top:1.142em;left:0.714em;font-weight:bold;width: 30px; height:30px; color: #fff; background: #bb141a; border-radius:50%;font-size: 14px;line-height: 29px;text-indent:11px;}
 
 /* 게시판 공통 */
-.list_link {position: absolute;display: block;left: 0;top: 0;right: 0;bottom: 0;font-size: 0;color: transparent;}
+.list_link {position: absolute;display: block;left: 0;top: 0;right: 0;bottom: 0;font-size: 0;color: transparent;overflow:hidden;}
 .box_cate {display:inline-block;border:1px solid ; height:40px; line-height: 38px; padding:0 15px;font-size: 13px;}
 .box_cate.beige {border-color:#bf8c4f; color: #bf8c4f;}
 .box_cate.green {border-color:#6eb548; color: #6eb548;}
@@ -147,3 +147,7 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
    hj.css - 여기 아래는 내영역
    ========================================================================== */
 
+.form_box + .form_box{margin-top:40px;}
+.form_box dt{margin-bottom:12px;}
+.form_box .textarea{height:250px;}
+.form_box .textarea[readonly]{color:#b2b2b2;-webkit-text-fill-color:#b2b2b2;}

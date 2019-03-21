@@ -56,18 +56,20 @@
 .input[type='search']::-webkit-search-cancel-button{display:none;}
 
 .label{display:inline-block}
-.input, .textarea, .select{display:inline-block;width:100%;height:40px;line-height:18px;padding:10px;border:1px solid #ccc;background:#fff;-webkit-transition-duration:.1s;transition-duration:.1s;vertical-align:middle;box-sizing:border-box;font-size:14px;}
-.input{font-size:18px;border-color:#f5f5f5;}
+.input, .textarea, .select{display:inline-block;width:100%;height:40px;line-height:18px;padding:10px;border:1px solid #ccc;background:#fff;-webkit-transition-duration:.1s;transition-duration:.1s;vertical-align:middle;box-sizing:border-box;font-size:14px;outline:none;}
+.input:focus, .textarea:focus, .select:focus{position:relative;border-color:#4b4b4b;}
 .input + .input{border-top:0 none;}
-.input:focus{border-bottom-color:#a5a5a5;}
 .input[type="file"]{padding:3px;line-height:26px;}
-.textarea{min-height:100px;padding:10px;resize:none;line-height:1.5;box-sizing:border-box;color:#b2b2b2;}
+.textarea{min-height:100px;padding:10px;resize:none;line-height:1.4;box-sizing:border-box;background:#fff;}
 .select{padding-right:25px;background:#fff url(../images/ico/ico_select.png) no-repeat right center;background-size:auto 7px;font-size:16px;}
 .select::-ms-expand{display:none;}
+.input.h50,
+.select.h50{font-size:18px;height:50px;line-height:28px;}
 
-.input[readonly], .select[readonly], .textarea[readonly],
-.input.readonly, .select.readonly, .textarea.readonly,
-.select:disabled, .textarea:disabled, .input:disabled{background-color:#e6e6e6;border-color:#e6e6e6;color:#737373;opacity:1;-webkit-text-fill-color:#737373;}
+/* .input[readonly], .select[readonly], .textarea[readonly],
+.input.readonly, .select.readonly, .textarea.readonly, */
+.select:disabled, .textarea:disabled, .input:disabled{background-color:#e6e6e6 !important;border-color:#e6e6e6 !important;color:#737373 !important;opacity:1;-webkit-text-fill-color:#737373;}
+.input.security{background:#faf9e5;}
 .input.security{background:#faf9e5;}
 
 ::-webkit-input-placeholder{color:#b2b2b2;font-size:14px;}
@@ -138,7 +140,7 @@
 [type='checkbox']:disabled::-ms-check{background:#bbb;} */
 
 [class*='input_']{position:relative;}
-[class*='input_'] + [class*='input_']{margin-top:6px;}
+[class*='input_'] + [class*='input_']{margin-top:10px;}
 .input_box{overflow:hidden;}
 .input_box .input_del{position:absolute;top:50%;right:10px;display:block;width:14px;height:14px;border:0;padding:0;background:url(../images/ico/ico_input_del.png) no-repeat 0 0;background-size:contain;overflow:hidden;font-size:0;text-indent:-9999px;opacity:0;-webkit-transform:translateY(-50%);transform:translateY(-50%);-webkit-transition:all 0.1s 0.5s;transition:all 0.1s 0.5s;z-index:-1;}
 input:focus + .input_del,
@@ -148,9 +150,9 @@ input.focus + .input_del{opacity:1;z-index:1;-webkit-transition-delay:0s;transit
 .input_wrap:after{content:'';display:block;clear:both;}
 .input_wrap > *{display:block;box-sizing:border-box;float:left;padding:0 5px;}
 
-.input_tbl{margin-left:-3px;margin-right:-3px;}
+.input_tbl{margin-left:-5px;margin-right:-5px;}
 .input_tbl > div{display:table;width:100%;table-layout:fixed;}
-.input_tbl > div > *{display:table-cell;/*width:25%;*/padding:0 3px;vertical-align:top;}
+.input_tbl > div > *{display:table-cell;/*width:25%;*/padding:0 5px;vertical-align:top;}
 .input_tbl > div > .middle{vertical-align:middle;}
 .input_tbl.col2 > div > .wid2{width:66.66%;}
 .input_tbl.col2 > div > .wid3{width:75%}
@@ -178,13 +180,16 @@ input.focus + .input_del{opacity:1;z-index:1;-webkit-transition-delay:0s;transit
 .input_toggle .checkbox,
 .input_toggle .radio{display:block;font-size:16px;}
 .input_toggle input{left:5px;top:5px;opacity:0;}
-.input_toggle input + label{position:relative;margin:0;padding:8px 5px;display:block;text-align:center;border:1px solid #d6d6d6;white-space:nowrap;font-size:14px;line-height:22px;}
-.input_toggle input:checked + label{border-color:#986a57;color:#986a57;}
-.input_toggle input:disabled + label{background:#fafafa;border-color:#dfdfdf;color:#dfdfdf;}
-.input_toggle input[readonly] + label{background:#f1f1f1;}
+.input_toggle input + .lbl{position:relative;margin:0;padding:8px 5px;display:block;text-align:center;border:1px solid #ccc;background:#fff;white-space:nowrap;font-size:14px;line-height:22px;color:#4b4b4b;}
+.input_toggle input + .lbl:after{content:'';display:inline-block;width:0;height:12px;margin-right:0;top:-1px;background-image:url(../images/ico/ico_toggle_chk.png);background-size:100% 100%;-webkit-transition:all 0.5s;transition:all 0.5s;}
+.input_toggle input:disabled + .lbl{background:#e6e6e6;border-color:#e6e6e6;color:#b2b2b2;}
+.input_toggle input[readonly] + .lbl{color:#b2b2b2;}
+.input_toggle input:checked + .lbl{border-color:#4b4b4b;color:#4b4b4b;}
+.input_toggle input:checked + .lbl:after{width:16px;margin-left:8px;}
 .input_toggle.inline{display:block;}
 .input_toggle.inline > *{display:inline-block;padding:3px;}
-.input_toggle.small input + label{line-height:20px;padding:4px 10px;min-width:38px;}
+.input_toggle.h50 input + .lbl{padding:13px 5px;font-size:18px;}
+.input_toggle.h30 input + .lbl{line-height:20px;padding:4px 10px;min-width:38px;}
 
 /*파일첨부*/
 .input_file{position:relative;display:table;width:100%;}
@@ -288,6 +293,7 @@ input.focus + .input_del{opacity:1;z-index:1;-webkit-transition-delay:0s;transit
 	display:-webkit-box;display:-webkit-flex;display:flex;
 	-webkit-box-orient:horizontal;-webkit-flex-direction:row;flex-direction:row;
 	-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;}
+.form_box + .btn_wrap{margin-top:40px;}
 .btn_wrap.left{-webkit-box-pack:left;-webkit-justify-content:flex-start;justify-content:flex-start;}
 .btn_wrap.right{-webkit-box-pack:right;-webkit-justify-content:flex-end;justify-content:flex-end;}
 .btn_wrap > span{display:block;padding:0 3px;-webkit-box-flex:1;-webkit-flex:1 100%;flex:1 100%;}
@@ -324,8 +330,7 @@ input.focus + .input_del{opacity:1;z-index:1;-webkit-transition-delay:0s;transit
 }
 
 .button.h36{line-height:34px;}
-.button.h50{line-height:48px;font-size:14px;}
-.button.h50.red{font-size:18px;}
+.button.h50{line-height:48px;font-size:18px;}
 
 .button.red{background:#e20d3a;border-color:#e20d3a;color:#fff;}
 .button.blue{background:#1f719a;border-color:#1f719a;color:#fff;}

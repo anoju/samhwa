@@ -20,7 +20,7 @@ input,button,select,img,iframe{vertical-align:middle;}
 button, input, optgroup, select, textarea, optgroup, pre{font-family:inherit;letter-spacing:inherit;}
 h1, h2, h3, h4, h5, h6{font-weight:700;-webkit-font-smoothing:subpixel-antialiased;}
 i,em{font-style:normal;}
-hr{margin:1.25em 0;border:0 none;border-top:1px solid #ccc;}
+hr{margin:2.5em 0;border:0 none;border-top:1px solid #e6e6e6;}
 sub{vertical-align:0;}
 
 /* ==========================================================================
@@ -198,10 +198,11 @@ a.grayscale:hover img, a.grayscale:focus img, a.grayscale:active img{
 /* ==========================================================================
    Print styles.
    ========================================================================== */
-
+/*
 @media print{
 	*{-webkit-print-color-adjust:exact;print-color:exact;color-adjust:exact;}
 	body{width:750px;}
 	#header, #footer{display:none;}
 	.safari body{font-family:serif;}
 }
+*/

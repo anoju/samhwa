@@ -902,6 +902,10 @@ var popOpen = function(tar,btn){
 	$(tar).fadeIn($popSpeed,function(){
 		$(this).attr({'tabindex':0}).focus();
 	});
+	popPosition(tar,$popSpeed);
+	$(window).on('resizeEnd',function(){
+		popPosition(tar,$popSpeed);
+	});
 };
 var popClose = function(tar){
 	var $visible = $('.pop_wrap:visible').size();
@@ -920,6 +924,31 @@ var popClose = function(tar){
 			$popOpenBtn = '';
 		}
 	});
+};
+var popPosition = function(tar,speed){
+	setTimeout(function(){
+		var $wrapH = $(tar).height(),
+			$pop = $(tar).find('.popup'),
+			$popCont = $pop.find('.pop_cont'),
+			$popBtn = $pop.find('.pop_btn');
+
+		$popCont.removeAttr('style');
+
+		var $popH = $pop.outerHeight(),
+			$mT = Math.max(0,($wrapH-$popH)/2),
+			$popContT = $popCont.position().top,
+			$popContH = $popCont.outerHeight(),
+			$popBtnH = $popBtn.outerHeight(),
+			$popContMaxH = Math.max(0,($popH-$popContT-$popBtnH));
+
+		if($popContH > $popContMaxH)$popCont.css({'height':$popContMaxH});
+
+		if(speed > 100){
+			$pop.stop().animate({'margin-top':$mT},speed);
+		}else{
+			$pop.css({'margin-top':$mT});
+		}
+	},10);
 };
 
 /* btn */
