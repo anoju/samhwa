@@ -60,17 +60,14 @@ var preLoading = function(){
 	var isAppPreLoading = sessionStorage.getItem('isPreLoading'),
 		$class = 'pre-loading',
 		$imgarry = [
-			// '/resource/img/wms/app/ico/ico_checkbox_disabled.png',
-			// '/resource/img/wms/app/ico/ico_checkbox_off.png',
-			// '/resource/img/wms/app/ico/ico_checkbox_on.png',
-			// '/resource/img/wms/app/ico/ico_radio_disabled.png',
-			// '/resource/img/wms/app/ico/ico_radio_off.png',
-			// '/resource/img/wms/app/ico/ico_radio_on.png',
-			// '/resource/img/wms/app/bg/bg-type-chart-01.png',
-			// '/resource/img/wms/app/bg/bg-type-chart-02.png',
-			// '/resource/img/wms/app/bg/bg-type-chart-03.png',
-			// '/resource/img/wms/app/bg/bg-type-chart-04.png',
-			// '/resource/img/wms/app/bg/bg-type-chart-05.png'
+			'/static/images/common/logo_white.png',
+			'/static/images/common/logo_red.png',
+			'/static/images/common/btn_gnb_open.png',
+			'/static/images/common/btn_gnb_open2.png',
+			'/static/images/common/head_search.png',
+			'/static/images/common/head_search2.png',
+			'/static/images/common/btn_gnb_close.png',
+			'/static/images/common/btn_pop_close.png'
 		];
 		
 	if(isAppPreLoading != 'true'){
@@ -268,6 +265,21 @@ var headerUI = function(){
 		$(this).parent().toggleClass('on').siblings().removeClass('on').find('ul').slideUp();
 	});
 
+	//
+	$('.head_search').click(function(e){
+		e.preventDefault();
+		if($('body').hasClass('search_open')){	
+			$('body').removeClass('search_open');
+		}else{	
+			$('body').addClass('search_open');
+		}
+	});
+	$('.btn_search_close').on('click',function(e){
+		e.preventDefault();
+		$('body').removeClass('search_open');
+	});
+	
+
 	//스크롤 시(리사이즈 시) 헤더 고정, visual 영
 	if($header.length > 0){
 		$(window).on('scroll resize',function(){
@@ -395,7 +407,7 @@ var commonUI = function(){
 		if($cntTxt.length > 0)$cntTxt.text('0');
 		if($(this).closest('.search_input').length)$(this).closest('.search_input').removeClass('on');
 	});
-	$('.search_input .input').keyup(function(){
+	$(document).on('keyup','.search_input .input',function(){
         var $val = $(this).val();
         if($val != ''){
             $('.search_input').addClass('on');
@@ -403,10 +415,10 @@ var commonUI = function(){
             $('.search_input').removeClass('on');
         }
 	});
-	$('.search_input .button').click(function(){
+	$(document).on('click','.search_input .button',function(){
 		$('.search_input').removeClass('on');
 		$('.search_input .input').val('');
-    });
+  });
 
 	//ui-all-chk :  전체동의
 	$(document).on('change','.ui-all-chk input',function(e){

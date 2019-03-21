@@ -147,7 +147,10 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
    hj.css - 여기 아래는 내영역
    ========================================================================== */
 
-.form_box + .form_box{margin-top:40px;}
-.form_box dt{margin-bottom:12px;}
-.form_box .textarea{height:250px;}
-.form_box .textarea[readonly]{color:#b2b2b2;-webkit-text-fill-color:#b2b2b2;}
+.dl > dt{margin-bottom:12px;color:#404040;font-weight:bold;}
+.dl > dt span{font-weight:normal;margin-left:10px;color:#808080;}
+.dl.tag > dd{margin:-2.5px;font-size:0;}
+.dl.tag > dd .button{margin:2.5px;}
+.dl.form + .form_box{margin-top:40px;}
+.dl.form .textarea{height:250px;}
+.dl.form .textarea[readonly]{color:#b2b2b2;-webkit-text-fill-color:#b2b2b2;}
