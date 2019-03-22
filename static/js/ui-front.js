@@ -225,7 +225,7 @@ var headerUI = function(){
 		$gnbTxt = $('#gnb a'),
 		$pageTitle = $('#pageTit');									//gnb, lnb, title에 쓰일 텍스트지정
 		
-	if($pageTitle.length > 0){
+	if($pageTitle.length > 0 && !$('body').hasClass('main')){
 		var $current = $.trim($pageTitle.text());
 		document.title = $current + ' | 삼화페인 모바일';			//#pageTit 가 title태그에 삽입
 
@@ -295,11 +295,22 @@ var headerUI = function(){
 			if($('#pageTop.visual').length > 0 && $header.hasClass('type2')){
 				var $topStart = $('#pageTop').offset().top,
 					$topEnd = $('#pageTop').outerHeight();
-				$('#pageTop.visual .bg').css('top',($scrollTop/2));
+
 				if($scrollTop > ($topStart + $topEnd)){
 					$header.addClass('on');
 				}else{
 					$header.removeClass('on');
+				}
+
+				if($scrollTop >= $topStart){
+					$scrollTop = $scrollTop - $topStart;
+					if($('body').hasClass('main')){
+						/*$('.main_banner').css({
+							'top':($scrollTop)
+						});*/
+					}else{
+						$('#pageTop.visual .bg').css('top',($scrollTop/2));
+					}
 				}
 			}
 		});

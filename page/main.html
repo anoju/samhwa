@@ -20,26 +20,231 @@
 	<!-- //javascript -->
 </head>
 <body class="main">
+
+<!-- topbanner -->
+<div class="top_banner">
+	<img src="../static/images/main/top_banner1.png" alt="배너">
+	<a href="#" class="btn_top_banner">닫기</a>
+</div>
+<div class="top_banner">
+	<img src="../static/images/main/top_banner2.png" alt="배너">
+	<div class="btn">
+		<label class="checkbox type2">
+			<input type="checkbox" name="" id=""><i></i>
+			<span class="lbl">1일간 열지 않음</span>
+		</label>
+		<a href="#" class="btn_top_banner">닫기</a>
+	</div>
+</div>
+<!-- //topbanner -->
+
 <!-- wrap -->
 <div id="wrap">
 	<!-- header -->
 	<div data-include-html="../include/header.html"></div>
 	<!-- //header -->
 
-	<!-- container -->
-	<div id="container">
-		<!-- contents -->
-		<section id="contents">
-			컨텐츠
-		</section>
-		<!-- //contents -->
-	</div>
-	<!-- //container -->
+	<!-- contents -->
+	<section id="contents">
+		<div id="pageTop" class="visual">
+			<div class="main_bg">
+				<div style="background-image:url(../static/images/main/main_banner.png);"></div>
+				<div style="background-image:url(../static/images/main/main_banner2.png);"></div>
+			</div>
+			<div class="main_banner swiper-container">
+				<ul class="swiper-wrapper">
+					<li class="swiper-slide">
+						<div class="cont">
+							<div class="tit">Life Canvas</div>
+							<div class="txt">당신의 상상 속 에만 있던 색을 <br>지금 바로 찾아보세요. </div>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<div class="cont">
+							<div class="tit">Life Canvas</div>
+							<div class="txt">당신의 상상 속 에만 있던 색을 <br>지금 바로 찾아보세요. </div>
+						</div>
+					</li>
+				</ul>
+				<div class="main_navi">
+					<div class="counter"></div><div class="process"><span></span></div>
+				</div>
+			</div>
+			<div class="main_search">
+				<h2 id="pageTit">무엇을 <br>찾으시나요?</h2>
+				<div class="input_toggle2">
+					<label class="radio">
+						<input type="radio" name="mainSearchOpt" class="chkeckbox" checked>
+						<span class="lbl">제품</span>
+					</label>
+					<label class="radio">
+						<input type="radio" name="mainSearchOpt" class="chkeckbox">
+						<span class="lbl">자료</span>
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="inner main_search_opt">
+			<div class="search_input">
+				<div><button class="btn_search">검색</button></div>
+				<div class="input_box">
+					<input type="text" class="input" placeholder="검색어를 입력해주세요" title="검색어 입력">
+					<button class="input_del">검색어 초기화</button>
+				</div>
+				<div>
+					<button href="#" class="button">취소</button>
+				</div>
+			</div>
+			<dl class="dl tag">
+				<dt>이런 키워드는 어떠세요?</dt>
+				<dd class="tag_wrap">
+					<a href="#" class="button h33 round2 gray3">#아이생각</a>
+					<a href="#" class="button h33 round2 gray3">#방수</a>
+					<a href="#" class="button h33 round2 gray3">#시멘트데코</a>
+					<a href="#" class="button h33 round2 gray3">#에포코트</a>
+					<a href="#" class="button h33 round2 gray3">#플레임체크</a>
+					<a href="#" class="button h33 round2 gray3">#친환경</a>
+					<a href="#" class="button h33 round2 gray3">#단열</a>
+					<a href="#" class="button h33 round2 gray3">#크리스탈</a>
+				</dd>
+			</dl>
+			<dl class="dl scroll">
+				<dt>PRODUCT<span>14 Types</span></dt>
+				<dd>
+					<div class="product_type">
+						<a href="#">
+							<figure>
+								<img src="../static/images/common/product_type_img1.png" alt="img">
+								<figcaption style="background-color:#1f719a;">건축용</figcaption>
+							</figure>
+						</a>
+						<a href="#">
+							<figure>
+								<img src="../static/images/common/product_type_img2.png" alt="img">
+								<figcaption style="background-color:#747483;">내화/방염</figcaption>
+							</figure>
+						</a>
+						<a href="#">
+							<figure>
+								<img src="../static/images/common/product_type_img3.png" alt="img">
+								<figcaption style="background-color:#8bb1bb;">공업용</figcaption>
+							</figure>
+						</a>
+						<a href="#">
+							<figure>
+								<img src="../static/images/common/product_type_img0.png" alt="img">
+								<figcaption style="background-color:#cb1300;">제관용</figcaption>
+							</figure>
+						</a>
+						<a href="#">
+							<figure>
+								<img src="../static/images/common/product_type_img5.png" alt="img">
+								<figcaption style="background-color:#a0a7ba;">합성수지용</figcaption>
+							</figure>
+						</a>
+						<a href="#">
+							<figure>
+								<img src="../static/images/common/product_type_img6.png" alt="img">
+								<figcaption style="background-color:#a71d15;">산업/플랜트용</figcaption>
+							</figure>
+						</a>
+						<a href="#">
+							<figure>
+								<img src="../static/images/common/product_type_img0.png" alt="img">
+								<figcaption style="background-color:#7f3361;">자동차용</figcaption>
+							</figure>
+						</a>
+						<a href="#">
+							<figure>
+								<img src="../static/images/common/product_type_img8.png" alt="img">
+								<figcaption style="background-color:#806e5d;">방수/바닥용</figcaption>
+							</figure>
+						</a>
+						<a href="#">
+							<figure>
+								<img src="../static/images/common/product_type_img9.png" alt="img">
+								<figcaption style="background-color:#d2a672;">목재/목공용</figcaption>
+							</figure>
+						</a>
+						<a href="#">
+							<figure>
+								<img src="../static/images/common/product_type_img10.png" alt="img">
+								<figcaption style="background-color:#736e6e;">PCM용</figcaption>
+							</figure>
+						</a>
+						<a href="#">
+							<figure>
+								<img src="../static/images/common/product_type_img0.png" alt="img">
+								<figcaption style="background-color:#714443;">분체용</figcaption>
+							</figure>
+						</a>
+						<a href="#">
+							<figure>
+								<img src="../static/images/common/product_type_img12.png" alt="img">
+								<figcaption style="background-color:#9ca268;">플라스틱용</figcaption>
+							</figure>
+						</a>
+						<a href="#">
+							<figure>
+								<img src="../static/images/common/product_type_img13.png" alt="img">
+								<figcaption style="background-color:#7f3361;">폴리우레아</figcaption>
+							</figure>
+						</a>
+						<a href="#">
+							<figure>
+								<img src="../static/images/common/product_type_img14.png" alt="img">
+								<figcaption style="background-color:#436018;">전자재료용</figcaption>
+							</figure>
+						</a>
+					</div>
+				</dd>
+			</dl>
+		</div>
+		<div class="inner gray main_cont">
+
+		</div>
+	</section>
+	<!-- //contents -->
 
 	<!-- footer -->
 	<div data-include-html="../include/footer.html"></div>
 	<!-- //footer -->
 </div>
 <!-- //wrap -->
+<script>
+//$('body').addClass('search_open');
+$(function(){
+	var $speed = 500,
+		$autoTime = 5000,
+		$slideLength = $('.main_banner .swiper-slide').length;
+
+	var mainNavi = function(num,length,speed){
+		$('.main_navi .counter').html(num +' / '+ length);
+		$('.main_navi .process > span').stop().css('width',0).animate({'width':'100%'},speed);
+		$('.main_bg').children().eq(num-1).addClass('on').siblings().removeClass('on');
+	}
+
+	var mainSwiper = $('.main_banner').swiper({		
+		loop: true,
+		calculateHeight: true,
+		resizeReInit: true,
+		autoplay: $autoTime,
+		onSwiperCreated:function(e){
+			var $idx = e.activeLoopIndex;
+			mainNavi($idx+1,$slideLength,$autoTime);
+		},
+		onSlideChangeEnd:function(e){
+			console.log(e);
+			var $idx = e.activeLoopIndex;
+			mainNavi($idx+1,$slideLength,$autoTime);
+		},
+	});
+	
+	$('.btn_top_banner').click(function(e){
+		e.preventDefault();
+		$(this).closest('.top_banner').slideUp();
+	});
+});
+</script>
 </body>
 </html>
