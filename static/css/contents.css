@@ -95,7 +95,7 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
 .social_area .txt h3 {font-size: 18px;color: #404040;padding-bottom: 15px;}
 .social_area .txt p {font-size: 14px;color: #808080;}
 .social_area .thumbnail_list {margin: -2px;padding-top: 30px;}
-.social_area .thumbnail_list li {float:left; width: 50%;height:;padding: 2px;position:relative;}
+.social_area .thumbnail_list li {float:left; width: 50%;padding: 2px;position:relative;}
 .social_area .thumbnail_list li:after {content:""; display: block;width: 40px; height:40px;position:absolute;bottom:0;left:0;}
 .social_area .thumbnail_list li.instagram:after {background: url(../images/ico/ico_instagram.png)0 0 no-repeat; background-size:cover;}
 .social_area .thumbnail_list li.youtube:after {background: url(../images/ico/ico_youtube.png)0 0 no-repeat; background-size:cover;}
@@ -191,8 +191,9 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
 .main #pageTop.visual{display:block;height:auto;padding:0;background-color:#fff;}
 .main #pageTop.visual > div{display:block;}
 .main #pageTop .main_search{position:relative;margin-top:-120px;padding:0 30px 55px;z-index:1;}
-.main_bg{position:absolute;left:0;top:0;width:100%;height:100%;}
-.main_bg > div{position:absolute;left:0;top:0;width:100%;height:100%;background-repeat:no-repeat;background-position:center center;background-size:cover;background-attachment:fixed;opacity:0;transition:opacity 0.3s;}
+.main_bg{position:absolute;left:0;top:0;width:100%;height:667px;}
+.main_bg.fixed{position:fixed;}
+.main_bg > div{position:absolute;left:0;top:0;width:100%;height:100%;background-repeat:no-repeat;background-position:center center;background-size:cover;opacity:0;transition:opacity 0.3s;}
 .main_bg > div.on{opacity:1;}
 
 .main_banner li{position:relative;}
@@ -203,7 +204,7 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
 .main_navi{position:absolute;top:315px;left:30px;right:30px;color:#fff;}
 .main_navi .counter{float:left;font-family: 'Montserrat';font-size:12px;}
 .main_navi .process{margin-left:25px;margin-top:7px;background:rgba(255,255,255,0.3);}
-.main_navi .process span{display:block;height:1px;background:#fff;}
+.main_navi .process div{display:block;height:1px;background:#fff;}
 
 .main_search_opt{padding-bottom:52.5px;z-index:1;}
 .main_search_opt .search_input{position:relative;top:-30px;}

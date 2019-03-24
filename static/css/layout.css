@@ -76,7 +76,7 @@
 .search_open{height:100%;}
 .search_open #wrap{min-height:100%;background:#f5f5f5;}
 .search_open #header,
-.search_open #container,
+.search_open #contents,
 .search_open #footer{display:none;}
 .search_open .hd_search{display:block;}
 .hd_search{display:none;position:relative;padding:65px 30px 30px;box-sizing:border-box;}

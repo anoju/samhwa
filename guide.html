@@ -4,7 +4,7 @@
 	<title>삼화페인트 모바일</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=375, user-scalable=no, viewport-fit=cover">
+	<meta name="viewport" content="width=375, user-scalable=no">
 
 	<!-- style -->
 	<link rel="stylesheet" href="./static/css/samhwa.css" media="all">
@@ -36,25 +36,6 @@
 					<strong>기본컬러{color:#000}</strong>
 					<br>
 					<strong class="fc_black">.fc_black{color:#333}</strong>
-					<br>
-					<strong class="fc_gray">.fc_gray{color:#666}</strong>
-					<br>
-					<strong class="fc_gray2">.fc_gray2{color:#999}</strong>
-					<br>
-					<strong class="fc_red">.fc_red{color:#ec1c24}</strong>
-					<br>
-					<strong class="fc_blue">.fc_blue{color:#1d9bd8;}</strong>
-					<br>
-					<strong class="fc_orange">.fc_orange{color:#ea7724}</strong>
-					<br>
-					<strong class="fc_green">.fc_green{color:#019676}</strong>
-					<br>
-					<strong class="fc_yellow">.fc_yellow{color:#ffc000}</strong>
-					<br>
-					<strong class="fc_brown">.fc_brown{color:#90594b}</strong>
-					<br>
-					<strong class="fc_sky">.fc_sky{color:#0098c2}</strong>
-					<br>
 				</div>
 			</div>
 
@@ -241,25 +222,6 @@
 						</span>
 					</label>
 				</div>
-				<div>
-					<label class="switch type2">
-						<input type="checkbox" name="" id="">
-						<span><span class="blind">설정</span></span>
-					</label>
-					<br>
-					<label class="switch type2">
-						<input type="checkbox" name="" id="">
-						<span>설정</span>
-					</label>
-					<br>
-					<label class="switch type2">
-						<input type="checkbox" name="" id="">
-						<span>
-							<span class="on">설정</span>
-							<span class="off">미설정</span>
-						</span>
-					</label>
-				</div>
 
 				<h4>기본 select</h4>
 				<select class="select" title="옵션선택">
@@ -294,12 +256,6 @@
 						<li><a href="//devprj-m.shinhancard.com/" class="option link" target="_blank" title="새창열림">신한카드 모바일</a></li>
 					</ul>
 				</div>
-				<h4>ui-select</h4>
-				<select class="ui-select" placeholder="선택해주세요">
-					<option value="">옵션1</option>
-					<option value="">옵션2</option>
-					<option value="">옵션3</option>
-				</select>
 
 				<h4>input</h4>
 				<div>
@@ -433,162 +389,6 @@
 				<br>
 				<textarea class="textarea" disabled>내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용
 					내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 </textarea>
-
-				<h4>datepicker</h4>
-				<div>
-					<span class="datepicker_wrap">
-						<input class="input datepicker" type="text" title="날짜입력">
-					</span>
-					<br> jquery-ui : datepicker
-				</div>
-
-				<h4>range</h4>
-				<div class="range_wrap">
-					<div class="slide_price"></div>
-					<div class="slide_range slide_range1"></div>
-					<ul class="marker">
-						<li><span>~1,000</span></li>
-						<li><span>2,000</span></li>
-						<li><span>3,000</span></li>
-						<li><span>4,000</span></li>
-						<li><span>5,000 ~</span></li>
-					</ul>
-				</div>
-				<div class="range_wrap">
-					<br>
-					<div class="slide_range slide_range2"></div>
-					<ul class="marker">
-						<li><span>0%</span></li>
-						<li><span>25%</span></li>
-						<li><span>50%</span></li>
-						<li><span>75%</span></li>
-						<li><span>100%</span></li>
-					</ul>
-				</div>
-				<script>
-					$(function () {
-						//가격범위
-						var $el = $('.slide_range1'),
-							$rangeMin = 1000,		   //최소값
-							$rangeMax = 5000;		   //최대값
-
-						var $range = $el.slider({
-							range: true,
-							min: $rangeMin,
-							max : $rangeMax,
-							step: 100,
-							values:[2500,4000],		 //기본세팅 값 설정
-							slide: function(event,ui){
-								if(ui.values[0] == ui.values[1]){
-									if(ui.values[1] == $rangeMin){
-										$('.slide_price').html('<strong>'+numberWithCommas(ui.values[0])+'</strong>만원 이하');
-									}else if(ui.values[0] == $rangeMax){
-										$('.slide_price').html('<strong>'+numberWithCommas(ui.values[0])+'</strong>만원 이상');
-									}else{
-										$('.slide_price').html('<strong>'+numberWithCommas(ui.values[0])+'</strong>만원');
-									}
-								}else if(ui.values[0] == $rangeMin && ui.values[1] == $rangeMax){
-									$('.slide_price').html('<strong>전체 가격</strong>');
-								}else{
-									$('.slide_price').html('<strong>'+numberWithCommas(ui.values[0])+'</strong>만원 이상~<strong>'+numberWithCommas(ui.values[1])+'</strong>만원 이하');
-								}
-							}
-						});
-
-						//기본세팅 값 텍스트 표시
-						$('.slide_price').html('<strong>'+numberWithCommas($range.slider('values',0))+'</strong>만원 이상~<strong>'+numberWithCommas($range.slider('values',1))+'</strong>만원 이하');
-
-						//가격범위
-						var $el = $('.slide_range2');
-						var $range = $el.slider({
-							min: 0,
-							max : 100,
-							step: 5,
-							values:[30],
-							slide: function(event,ui){
-								$('.slide_range2 .ui-slider-handle:eq(0) strong').html(ui.values[0]);
-							}
-						});
-						$('.slide_range2 .ui-slider-handle:eq(0)').append('<span><strong>'+$range.slider('values',0)+'</strong>%</span>')
-					});
-
-					function numberWithCommas(x) {
-						return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-					}
-				</script>
-
-				<!-- <h4>spinner</h4>
-			<div>
-				<input class="spinner" type="text" value="2">
-				<br> jq-ui spinner
-				<br><br>
-				<span class="inp_spinner" data-min="1" data-max="10">
-					<span>
-						<input class="input" type="text" value="2" readonly="readonly">
-					</span>
-					<a href="#" class="btn btn_minus"><i class="fa fa-minus"></i><span class="blind">빼기</span></a>
-					<a href="#" class="btn btn_plus"><i class="fa fa-plus"></i><span class="blind">더하기</span></a>
-				</span>
-				<br> inp_spinner
-				<br><strong class="t_blue">data-min</strong>와 <strong class="t_blue">data-max</strong>로 최소값 및 최대값 설정, input에 value가 없으면 최소값 설정됨
-			</div> -->
-			</div>
-			<h3>COUNT UP</h3>
-			<div class="cont_in">
-				<h4>ui-countup</h4>
-				<p class="ui-countup" data-before="15789.5" data-duration="2">15789.5</p>
-				<p class="ui-countup" data-before="5.05">8.25</p>
-				<p class="ui-countup">150000</p>
-				<h4>ui-countuplist</h4>
-				<p class="ui-countuplist" data-count="123,456,789">150000</p>
-			</div>
-			<!--
-
-		<h4 id="count1">123.2</h4>
-		<script>
-			//CountUp 사용법
-			//new CountUp('아이디', 변경전숫자, 변경될숫자, 소수점, 시간, 옵션)
-			var count1 =  new CountUp('count1',30000.50,15000.05,2,1,{
-				useEasing: true,
-				useGrouping: true,
-				separator: ',',
-				decimal: '.'
-			})
-			if(!count1.error){
-				count1.start(); //실행
-			}else{
-				console.log(count1.error);
-			}
-		</script> -->
-
-			<h3>Step</h3>
-			<div class="step">
-				<ol>
-					<li>
-						<span>
-							<span class="num">1</span>
-							<span class="txt">1단계</span>
-						</span>
-					</li>
-					<li class="active">
-						<span>
-							<span class="num">2</span>
-							<span class="txt">2단계</span>
-						</span>
-					</li>
-					<li>
-						<span>
-							<span class="num">3</span>
-							<span class="txt">3단계</span>
-						</span>
-					</li>
-					<li>
-						<span>
-							<span class="num">4</span>
-							<span class="txt">4단계</span>
-						</span>
-					</li>
-				</ol>
 			</div>
 			<h3>팝업</h3>
 			<div class="cont_in">
