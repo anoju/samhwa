@@ -29,7 +29,7 @@
 <div class="top_banner">
 	<img src="../static/images/main/top_banner2.png" alt="배너">
 	<div class="btn">
-		<label class="checkbox type2">
+		<label class="checkbox type2 opacity">
 			<input type="checkbox" name="" id=""><i></i>
 			<span class="lbl">1일간 열지 않음</span>
 		</label>
@@ -71,7 +71,7 @@
 				</div>
 			</div>
 			<div class="main_search">
-				<h2 id="pageTit">무엇을 <br>찾으시나요?</h2>
+				<h2 id="pageTit" style="opacity:0.2">무엇을 <br>찾으시나요?</h2>
 				<div class="input_toggle2">
 					<label class="radio">
 						<input type="radio" name="mainSearchOpt" class="chkeckbox" checked>
@@ -201,7 +201,40 @@
 			</dl>
 		</div>
 		<div class="inner gray main_cont">
-
+			<h3 class="main_tit">Paint <br>Idea</h3>
+			<div class="cont main_swiper">
+				<div class="swiper-container">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide">
+							<a href="#">
+								<div class="img"><img src="../static/images/main/main_swiper1.png" alt=""></div>
+								<div class="txt">올해의 컬러 뉘앙스 <br>Grounded Deligh (대지의 환희)</div>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<a href="#">
+								<div class="img"><img src="../static/images/main/main_swiper1.png" alt=""></div>
+								<div class="txt">올해의 컬러 뉘앙스 <br>Grounded Deligh (대지의 환희)</div>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<a href="#">
+								<div class="img"><img src="../static/images/main/main_swiper1.png" alt=""></div>
+								<div class="txt">올해의 컬러 뉘앙스 <br>Grounded Deligh (대지의 환희)</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<hr class="hr">
+			<h3 class="main_tit">Samhwa <br>SNS & News</h3>
+			<div class="cont">
+				<div class="video">
+					<a href="#">
+						<div class="img"><img src="../static/images/main/video_img.png" alt=""></div>
+					</a>
+				</div>
+			</div>
 		</div>
 	</section>
 	<!-- //contents -->
@@ -211,6 +244,34 @@
 	<!-- //footer -->
 </div>
 <!-- //wrap -->
+
+<!-- popup -->
+<div id="popMain" class="pop_wrap transparent" style="display:block;">
+	<article class="popup">
+		<div class="pop_cont">
+			<div class="img_box out"><img src="../static/images/main/Layer_img.png" alt=""></div>
+			<div class="today_chk">
+				<label class="checkbox type2 opacity">
+					<input type="checkbox" name="" id=""><i></i>
+					<span class="lbl">1일간 열지 않음</span>
+				</label>
+				<a href="#" role="button" class="btn_pop_close ui-pop-close">팝업닫기</a>
+			</div>
+		</div>
+	</article>
+</div>
+
+<div id="poVideo" class="pop_wrap transparent" style="display:block;">
+	<article class="popup">
+		<div class="pop_cont">
+			<div class="img_box out"><img src="../static/images/main/Layer_video_img.png" alt=""></div>
+		</div>
+		<a href="#" role="button" class="btn_pop_close ui-pop-close">팝업닫기</a>
+	</article>
+</div>
+<!-- //popup -->
+
+
 <script>
 //$('body').addClass('search_open');
 $(function(){
@@ -234,10 +295,16 @@ $(function(){
 			mainNavi($idx+1,$slideLength,$autoTime);
 		},
 		onSlideChangeEnd:function(e){
-			console.log(e);
 			var $idx = e.activeLoopIndex;
 			mainNavi($idx+1,$slideLength,$autoTime);
-		},
+		}
+	});
+
+	var mainSwiper2 = $('.main_swiper .swiper-container').swiper({		
+		loop: true,
+		calculateHeight: true,
+		resizeReInit: true,
+		autoplay: $autoTime
 	});
 	
 	$('.btn_top_banner').click(function(e){

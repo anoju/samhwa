@@ -169,9 +169,15 @@ var headerUI = function(){
 					$header.removeClass('on');
 				}
 				$scrollTop = Math.max(0,$scrollTop - $topStart);
+				
 				if($('body').hasClass('main')){
 					if($scrollTop > 0){
 						$('.main_bg').addClass('fixed');
+						var $height = $(window).height() * 0.6,
+							$opacity  = Math.max(0.2,Math.min(1,$scrollTop/$height)),
+							$opacity2  = 1- Math.max(0,Math.min(0.8,$scrollTop/$height));
+						$('#pageTit').css('opacity',$opacity);
+						$('.main_navi, .main_banner .cont').css('opacity',$opacity2);
 					}else{
 						$('.main_bg').removeClass('fixed');
 					}

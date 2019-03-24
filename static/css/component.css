@@ -123,9 +123,16 @@
 .radio input:disabled + i{background:#f1f1f1;}
 .checkbox input:disabled + i:after,
 .radio input:disabled + i:after{border-color:#f1f1f1;}
-
 /* .checkbox input:checked + i + .lbl,
 .radio input:checked + i + .lbl{color:#0098c2;} */
+
+.checkbox.type2.opacity i{border-color:rgba(255,255,255,0.5);background:transparent;}
+.checkbox.type2.opacity i:after{border-color:rgba(255,255,255,0.5);}
+.checkbox.type2.opacity input:checked + i{border-color:rgba(255,255,255,1);background:#fff;}
+.checkbox.type2.opacity input:checked + i:after{border-color:#000;}
+.checkbox.type2.opacity .lbl{color:#fff;opacity:0.5;}
+.checkbox.type2.opacity input:checked + i + .lbl{opacity:1;}
+
 
 /*ie*/
 /* [type='radio']::-ms-check,
