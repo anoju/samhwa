@@ -44,12 +44,17 @@
 
 /* 게시판 공통 */
 .list_link {position: absolute;display: block;left: 0;top: 0;right: 0;bottom: 0;font-size: 0;color: transparent;overflow:hidden;}
-.box_cate {display:inline-block;border:1px solid ; height:40px; line-height: 38px; padding:0 15px;font-size: 13px;}
+.box_cate {display:inline-block;border:1px solid ; height:40px; line-height: 38px; padding:0 15px;font-size: 13px;text-align: center;min-width:77px}
+.box_cate.new_prd {line-height: 1.5;}
 .box_cate.beige {border-color:#bf8c4f; color: #bf8c4f;}
 .box_cate.green {border-color:#6eb548; color: #6eb548;}
 .box_cate.blue {border-color:#4f6acd; color: #4f6acd;}
+.box_cate.yellow {border-color: #e9af32;color: #e9af32;}
+.box_cate.purple {border-color: #6983d9;color: #6983d9;}
+.box_cate.hotpink {border-color: #f25b7f;color: #f25b7f;}
+.box_cate.skyblue {border-color: #40a8e3;color: #40a8e3;}
 span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
-.news_view .cont img,.board_view .cont img,.idea_view .cont img ,.recruit_view .cont img {width: 100%;}
+.news_view .cont img,.board_view .cont img,.idea_view .cont img ,.recruit_view .cont img,.new_prd_view img,.color_trend_view img{width: 100%;}
 .file_list {margin-top: 35px;}
 .file_list li + li {margin-top: 10px;}
 .file_list .button {padding-right: 40px;}
@@ -68,7 +73,7 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
 .news_view {padding-top: 60px;}
 .news_view .top_area {margin-bottom:30px ;}
 .news_view .img_box {margin-bottom: 27px;}
-.news_view h3 {font-weight: normal;padding-left: 97px;position:relative;margin-bottom: 18px;color: #404040;font-size: 16px;}
+.news_view h3 {font-weight: normal;padding-left: 97px;position:relative;margin-bottom: 18px;color: #404040;font-size: 16px;min-height:41px;}
 .news_view .box_cate {position:absolute;top:3px;left:0}
 .news_view .cont {color: #808080;}
 
@@ -126,6 +131,46 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
 /* ==========================================================================
    ye.css - 영은 css 여기아래 넣으삼
    ========================================================================== */
+/* 회사소개 */
+.about {padding-top: 60px;}
+.about h4 {;font-size: 36px;color: #404040;font-family: "Montserrat";font-weight: 800;margin-bottom: 30px;}
+.about h4 img {width: 93px;}
+.about > p {color: #808080;}
+.about table {margin-top: 40px;}
+.about table th {padding: 10px 5px;color: #e20d3a;background: #f7c4f7;font-weight: normal;font-size: 14px;text-align: left;}
+.about table td {padding: 10px 25px;color: #404040;font-size: 14px;}
+.about table tr:first-child th {border-top: 1px solid #e20d3a;}
+.about table tr:first-child td {border-top: 1px solid #e6e6e6;}
+.about table tr:last-child th,
+.about table tr:last-child td {border-bottom: 1px solid #e6e6e6;}
+.about h3 {margin: 60px 0 30px;font-size: 34px; color: #404040;}
+.about .company_info {padding: 20px 0;border: solid #e6e6e6;border-width: 1px 0 1px;margin:40px 0 ;position:relative}
+.about .company_info:before {content:"";display: block;width:60px ;height:1px;background: #e20d3a;position:absolute;top:-1px;left:0;}
+.about .company_info dl {display: inline-block; vertical-align:top;width: 49.5%;}
+.about .company_info dl:first-child,
+.about .company_info dl:nth-child(2) {padding-bottom: 20px;}
+.about .company_info dl dt {font-size: 14px; color: #e20d3a;padding-bottom: 10px;}
+.about .company_info dl dd p {font-size: 18px;color: #404040;padding-bottom: 10px;font-weight: bold;}
+.about .company_info dl dd strong {font-family:"Montserrat" ;font-weight: 700;}
+.about .company_info dl dd span {font-size: 10px;color: #b2b2b2;vertical-align:top;}
+.link_list li {padding: 20px 0;}
+.link_list li a {color: #404040;display: inline-block;padding-right: 35px;position:relative;}
+.link_list li a:after {content:"";display: block;width: 20px; height:16px; position:absolute;top:3px;right:0;background: url(../images/contents/ico_arr_about.png) 0 0 no-repeat;background-size:cover;;}
+
+/* 신제품 */
+.new_prd_list {padding-top: 20px;}
+.new_prd_list li {position:relative;}
+.new_prd_list li + li {margin-top: 50px;}
+.new_prd_list li .img_box {margin-bottom: 27px;}
+.new_prd_list li .tit {padding-left:103px ;position:relative;}
+.new_prd_list li .tit p {font-size: 16px;color: #404040;height:41px;}
+.new_prd_list .box_cate {position:absolute;top:3px;left:0}
+.new_prd_view {padding-top: 60px;}
+.new_prd_view .top_area {margin-bottom:30px;}
+.new_prd_view h3 {font-weight: normal;padding-left: 103px;position:relative;margin-bottom: 10px;color: #404040;font-size: 16px;min-height:41px;}
+.new_prd_view .box_cate {position:absolute;top:3px;left:0}
+.new_prd_view .cont {color: #808080;}
+
 /* 인재채용 */
 .board_list.recruit li > div.status {width: 50px;text-align: right;text-decoration:underline}
 .board_list.recruit li.finished,.board_list.recruit li.finished h3 {color: #b2b2b2 !important;}
@@ -134,7 +179,7 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
 .board_list.recruit li h3 {margin-bottom: 13px;font-weight: bold;}
 .board_list.recruit li p {display: inline-block;margin-right: 10px;}
 .board_list.recruit li p i + i {margin-left: 5px;}
-.board_list.recruit {position:relative;margin-top: 20px;padding-top:9px}
+.board_list.recruit {position:relative;padding-top: 9px;margin-top: 20px;}
 .board_list.recruit:before {content:"";display: block;width: 120%;height:9px; border-top: 1px solid #dbdbdb;position:absolute;top:0;left:-30px;background: #ebebeb;}
 .board_list.recruit li.finished .list_link {display: none;}
 .recruit_view {padding-top: 30px;}
@@ -152,6 +197,141 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
 .recruit_view .cont table th,.recruit_view .cont table td {padding: 12px 0;font-size: 14px;border-bottom: 1px solid #e6e6e6;vertical-align: top}
 .recruit_view .cont table th {color: #808080;text-align:left;font-weight: normal;}
 .recruit_view .cont table td {color: #404040;}
+
+/* 인재상 */
+.talent_wrap {padding-top: 60px;}
+.talent_wrap .top_area {margin-bottom: 40px;}
+.talent_wrap .top_area h3 {color: #404040;font-size: 44px;line-height:1.2;padding-bottom: 15px}
+.talent_wrap .top_area h3 span {display: block;font-size: 20px;}
+.talent_wrap .top_area h3 em {font-style: normal;color: #e20d3a;display: block;line-height:0.9}
+.talent_wrap ul li {padding-bottom: 60px;position:relative;overflow: hidden;}
+.talent_wrap ul li .txt_box {background: #fff;}
+.talent_wrap ul li h4 {color: #404040; font-size: 18px;padding: 30px 63px 30px 30px;position:relative;}
+.talent_wrap ul li p {padding: 0 30px 30px;color: #808080;font-size: 14px;position:relative;display: none;transition: all 0.3s ease-in;}
+.talent_wrap ul li.on p {display: block;} 
+.btn_open_talent {font-size: 0;position:absolute;top:50%;margin-top: -9px;right:30px;width: 18px; height:18px;cursor:pointer;}
+.btn_open_talent:before,.btn_open_talent:after {content:"";display: block;position:absolute;background: #404040;width:100%; top:50%;left:0;height:1px;}
+.btn_open_talent:after {transform:rotate(90deg);transition:transform 0.3s ease;}
+.talent_wrap ul li.on .btn_open_talent:after {transform:rotate(0)}
+
+/* 인사제도 */
+.career_wrap {text-align: center;}
+.career_wrap .box {background: #fff; padding: 30px 0 ; width: 100%;color: #404040;}
+.career_wrap .top_box {position:relative;top:-30px;box-shadow:0 10px 30px rgba(0,0,0,0.1);}
+.career_wrap .top_box:after {content:""; display: block;width:113px; height:113px; background: url(../images/contents/img_career.png) 0 0 no-repeat; background-size:cover;margin: 20px auto 0;}
+.career_wrap .top_box span {color: #e20d3a;}
+.career_wrap h3 {padding-top:30px; font-size:28px;margin-bottom: -10px;}
+.career_wrap h3:after {content:"";display: block;width:22px; height:2px; margin: 20px auto 0 ; background: #b3b3b3;}
+.career_wrap h3,h4 {color: #404040;}
+.career_wrap h4 {font-size: 18px;margin-bottom: 15px;padding-top: 50px;}
+.career_wrap .img_box {padding-top: 25px;}
+.career_wrap p {color: #808080;}
+.career_wrap ul {padding: 30px 0 66px;}
+.career_wrap ul li + li {margin-top:20px;}
+.career_wrap ul li .box {width: 240px;margin: 0 auto;border-radius:4px;}
+.career_wrap ul li .box p {padding-top: 20px ;color: #404040;font-size: 18px;}
+.career_wrap ul li .box img {width: 75px;}
+.career_welfare_wrap {padding-top:60px;}
+.career_welfare_wrap h4 {font-size: 20px;position:relative;}
+.career_welfare_wrap h4 span {display: inline-block;background: #fff;position: relative;z-index: 2;padding-right: 10px;}
+.career_welfare_wrap h4:before {content:"";display: block;width: 100%; height:1px; background: #e5e5e5;top:50%; left:0; position:absolute;;}
+.career_welfare_wrap dl {margin-top: 50px;color: #404040;}
+.career_welfare_wrap dl dt, .career_welfare_wrap dl dd {position:relative;}
+.career_welfare_wrap dl dt:before ,.career_welfare_wrap dl dd:before {content:"";display: block;position:absolute;}
+.career_welfare_wrap dl dt:before {width: 3px; height:3px; background: #e20d3a;top:10px; left:0}
+.career_welfare_wrap dl dd:before {top:8px;left:15px; width:5px; height:7px;position:absolute; background: url(../images/contents/bullet_career.png) 0 0 no-repeat; background-size:cover;}
+.career_welfare_wrap dl dt {padding-left: 15px;font-size: 18px;;}
+.career_welfare_wrap dl dd {padding-left: 30px;color: #808080;margin-top: 10px;} 
+.career_welfare_wrap dl dt + dd {margin-top: 13px;}
+
+/* ncs */
+.ncs_area {padding-top: 60px;}
+.ncs_area h3 {font-size: 28px;color: #404040;font-weight: 700;}
+.ncs_area p {color: #404040;position:relative;padding-bottom: 41px;}
+.ncs_area p:after {content:"";display: block;width: 22px; height:1px; background:#b3b3b3 ;position:absolute;bottom:20px;left:0;}
+.ncs_area span {font-size: 14px;color: #808080;}
+.ncs_area div {margin-top: 35px;height:574px; overflow: auto;background: #000;}
+
+/* 컬러디자인센터 공용 */
+.lnb_swiper {border-bottom: 1px solid #e4e4e4;z-index: 100;}
+.lnb_swiper.sch_nxt_lnb a {padding: 0 0 25px;}
+.lnb_swiper .swiper-wrapper {height: auto !important;}
+.lnb_swiper li {padding: 0 15px;}
+.lnb_swiper li:first-child {padding-left: 30px;}
+.lnb_swiper a {padding: 25px 0;color: #b2b2b2;font-weight: bold;display: block;position: relative;}
+.lnb_swiper a:after {content:"";display: block;width: 100%;height:2px;position:absolute;bottom:20px; left:0;}
+.lnb_swiper .on a {color: #404040;}
+.lnb_swiper .on a:after {background: #404040;}
+.tab_wrap.fixed .lnb_swiper {position:fixed;top:50px; width: 100% !important;background: rgba(255,255,255,0.9);z-index: 100;}
+.tab_wrap.fixed .lnb_swiper a {padding: 15px 0;}
+.tab_wrap.fixed .lnb_swiper a:after {bottom:10px;}
+
+/* 컬러트렌드 */
+.color_trend_list li {position:relative;padding-bottom:60px;}
+.color_trend_list li:last-child {padding-bottom: 0;}
+.color_trend_list li h3 {padding-top: 20px;font-size: 18px; color: #404040; height:70px;display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;text-overflow:ellipsis;}
+.color_trend_view {padding-top: 60px;}
+.color_trend_view .top_area {margin-bottom: 30px;}
+.color_trend_view .top_area h3 {font-weight: normal;color:#404040;font-size: 20px;margin-bottom: 30px;}
+
+/* 컬러디자인센터 소개 */
+.col_design_ct_intro {padding-top: 60px;position:relative;background:url(../images/contents/bg_scd.png)100% 60px no-repeat;background-size:157px 315px;color: #808080}
+.col_design_ct_intro h4 {margin-bottom: 40px;}
+.col_design_ct_intro h4 img {width:153px; height:89px;}
+.col_design_ct_intro dl {margin-top: 40px;}
+.col_design_ct_intro dl dt {font-size: 18px; color: #404040;padding-bottom: 10px;}
+.col_design_ct_intro dl dd {margin-bottom: 40px;}
+.col_design_ct_intro dl dd:last-child {margin: 0;}
+.col_design_ct_intro h5 {font-size: 36px;color: #404040;font-weight: 800;margin: 60px 0 40px; position:relative;}
+.col_design_ct_intro h5 span {position:relative;z-index: 1;background:#f5f5f5 ;padding-right: 18px;}
+.col_design_ct_intro h5:after {content:"";display: block;width: 100%; height:2px; background: #404040;position:absolute;bottom:22px; right:0;;}
+.col_design_ct_intro ul li + li {margin-top: 30px;}
+.col_design_ct_intro ul li {padding-left:45px;position:relative;}
+.col_design_ct_intro ul li:before {position:absolute;top:5px;left:0; content:""; display: block;width:35px; height:35px; background: url(../images/contents/ico_scd_01.png)0 0 no-repeat; background-size:cover;}
+.col_design_ct_intro ul li:nth-child(2):before {background-image: url(../images/contents/ico_scd_02.png);}
+.col_design_ct_intro ul li:nth-child(3):before {background-image: url(../images/contents/ico_scd_03.png);}
+.col_design_ct_intro ul li span {font-size: 13px;}
+.col_design_ct_intro ul li p {font-size: 18px;}
+.col_design_ct_intro p strong span {color: #404040;}
+
+/* 아파트도장 */
+.apt_tabmenu > ul{position:relative;display:table;width:100%;table-layout:fixed;border-collapse:collapse;}
+.apt_tabmenu > ul > li {display:table-cell;vertical-align:middle;}
+.apt_tabmenu > ul > li > a{position:relative;display:block;padding-top:18px ;font-weight:bold;color:#b2b2b2;}
+.apt_tabmenu > ul > li > a:before {content:"";display: none;width:8px; height:8px;background: #e20d3a;border-radius:50%; position:absolute;top:0;left:0;}
+.apt_tabmenu > ul > li.active > a{color:#404040;} 
+.apt_tabmenu > ul > li.active > a:before {display: block;}
+
+/* ------------------------------------------여기까지 4/8에 넘김 */
+
+.apt_down_area {padding: 40px 0;color: #404040;position:relative;}
+.apt_down_area span {font-size: 14px;}
+.apt_down_area span i {display: inline-block;margin-left: 8px;width:12px; height:12px; background:url(../images/ico/ico_download2.png) 0 0 no-repeat;background-size:cover;vertical-align:middle;}
+.apt {padding-top: 60px;}
+.apt h4 {color: #404040; font-size: 20px; padding-bottom: 50px;position:relative}
+.apt h4.line:after {width: 22px; height:1px; content:"";display: block;position:absolute;bottom:30px; left:50%; margin-left: -11px; background: #b3b3b3;}
+.apt h4.side_line:after {content:"";display: block;width: 100%; height:1px; background: #e5e5e5;position:absolute;top:12px; right:0;}
+.apt h4.side_line span {display: inline-block; z-index: 1;background:#fff ;padding-right: 10px;position: relative;}
+.apt ul {margin: 0 -7.5px;padding-bottom: 45px;}
+.apt ul li {float:left;width: 50%; padding:0 7.5px 15px;}
+.apt ul li > div {background: #fff;padding: 30px 15px; text-align: center;}
+.apt ul li img {width: 64px; height:64px;}
+.apt ul li h5 {color: #404040;font-weight: normal;margin: 15px 0 10px;font-size: 16px;}
+.apt ul li span {font-size: 13px;color: #808080;}
+.apt ol {padding:0 15px;}
+.apt ol li:first-child {margin-top: 0;}
+.apt ol li {padding-left: 85px;margin-top: 50px;position:relative;}
+.apt ol li:before {content:"";display: block;width: 15px; height:15px; background: url(../images/contents/bullet_apt_process.png) 0 0 no-repeat;background-size:cover;position:absolute;top:6px;left:0;}
+.apt ol li strong {font-size:20px;font-family: "Montserrat" ;font-weight: 700;color: #404040; position:absolute;top:0;left:45px;}
+.apt ol li h5 {font-size: 16px;color: #404040;padding-bottom: 10px;}
+.apt ol li p {font-size: 14px; color: #808080;padding-bottom: 10px;}
+.apt ol li img {width: 36px; height:36px;}
+
+
+
+
+
+
 
 
 /* ==========================================================================

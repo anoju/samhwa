@@ -17,13 +17,27 @@ $(document).ready(function(){
 	btnUI();
 	tabUI();
 	toggleUI('.btn_toggle_01', false);
-
+	lnbSwiper();
 	scrollItem();
-
+	
 	$(window).load(function(){
 		$(window).resize();
 	});
 });
+
+var lnbSwiper = function(){
+	$('.lnb_swiper').swiper({		
+			calculateHeight: true,
+			slidesPerView: 'auto'
+	});
+	$('.lnb_swiper a').each(function(){
+		var $lnbTxt = $(this).text(),
+			$titTxt = $('.lnb_tit').text();
+		if($lnbTxt == $titTxt){
+			$(this).parents('li').addClass('on');
+		}
+	})
+}
 
 var preLoading = function(){
 	var isAppPreLoading = sessionStorage.getItem('isPreLoading'),

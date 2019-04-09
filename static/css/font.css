@@ -10,6 +10,6 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanssc.css);
 
 /* 영문 : font-family:'Montserrat';*/
-@import url(//fonts.googleapis.com/css?family=Montserrat);
+@import url(//fonts.googleapis.com/css?family=Montserrat:500,700,800);
 
 .f_mont{font-family:'Montserrat';}
