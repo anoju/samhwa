@@ -33,4 +33,6 @@ body.pop_open{overflow:hidden;}
 
 /* popup contents */
 .zipcode_wrap{border:1px solid #000;min-height:400px;background:#fff;}
-
+.pop_video_cont{color:#fff;margin-top:28px;}
+.pop_video_cont .tit{font-size:18px;}
+.pop_video_cont .date{font-size:12px;margin-top:10px;}

@@ -46,10 +46,10 @@ sub{vertical-align:0;}
 .fc_black{color:#000 !important;}
 .fc_gray{color:#666 !important;}
 .fc_gray2{color:#999 !important;}
-.fc_red{color:#d21651 !important;}
+.fc_red{color:#f94f4f !important;}
 .fc_orange{color:#ea7724 !important;}
 .fc_green{color:#69bd25 !important;}
-.fc_blue{color:#204f97 !important;}
+.fc_blue{color:#40a8e3 !important;}
 .fc_yellow{color:#ffc000 !important;}
 .fc_brown{color:#90594b !important;}
 
@@ -144,6 +144,9 @@ sub{vertical-align:0;}
 .hidden{overflow:hidden;}
 .blind{position:absolute;overflow:hidden;width:0px;height:0px;font-size:0;line-height:0;text-indent:-9999px;}
 .ellipsis{display:block;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;}
+.video{position:relative;padding-bottom:56.25%;}
+.video iframe,
+.video video{position:absolute;left:0;top:0;width:100%;height:100%;}
 
 .alert_txt{font-size:12px;color:#a81212;text-align:right;}
 .alert_txt.error_txt{text-align:left;}
