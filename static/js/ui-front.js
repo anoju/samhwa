@@ -1,4 +1,3 @@
-
 /********************************
  * UI 스크립트 *
  * 작성자 : 안효주 *
@@ -36,8 +35,8 @@ var lnbSwiper = function(){
 		if($lnbTxt == $titTxt){
 			$(this).parents('li').addClass('on');
 		}
-	})
-}
+	});
+};
 
 var preLoading = function(){
 	var isAppPreLoading = sessionStorage.getItem('isPreLoading'),
