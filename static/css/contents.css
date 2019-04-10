@@ -253,7 +253,7 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
 .ncs_area div {margin-top: 35px;height:574px; overflow: auto;background: #000;}
 
 /* 컬러디자인센터 공용 */
-.lnb_swiper {border-bottom: 1px solid #e4e4e4;z-index: 100;}
+.lnb_swiper {border-bottom: 1px solid #e4e4e4;z-index: 3;}
 .lnb_swiper.sch_nxt_lnb a {padding: 0 0 25px;}
 .lnb_swiper .swiper-wrapper {height: auto !important;}
 .lnb_swiper li {padding: 0 15px;}
@@ -262,7 +262,7 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
 .lnb_swiper a:after {content:"";display: block;width: 100%;height:2px;position:absolute;bottom:20px; left:0;}
 .lnb_swiper .on a {color: #404040;}
 .lnb_swiper .on a:after {background: #404040;}
-.tab_wrap.fixed .lnb_swiper {position:fixed;top:50px; width: 100% !important;background: rgba(255,255,255,0.9);z-index: 100;}
+.tab_wrap.fixed .lnb_swiper {position:fixed;top:50px; width: 100% !important;background: rgba(255,255,255,0.9);}
 .tab_wrap.fixed .lnb_swiper a {padding: 15px 0;}
 .tab_wrap.fixed .lnb_swiper a:after {bottom:10px;}
 
@@ -295,10 +295,13 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
 .col_design_ct_intro p strong span {color: #404040;}
 
 /* 아파트도장 */
+.apt_tabmenu {padding-bottom: 20px;}
 .apt_tabmenu > ul{position:relative;display:table;width:100%;table-layout:fixed;border-collapse:collapse;}
-.apt_tabmenu > ul > li {display:table-cell;vertical-align:middle;}
+.apt_tabmenu > ul > li {display:table-cell;vertical-align:middle;box-sizing:border-box;padding-left: 4%;}
+.apt_tabmenu > ul > li:first-child{padding-left: 0;}
 .apt_tabmenu > ul > li > a{position:relative;display:block;padding-top:18px ;font-weight:bold;color:#b2b2b2;}
-.apt_tabmenu > ul > li > a:before {content:"";display: none;width:8px; height:8px;background: #e20d3a;border-radius:50%; position:absolute;top:0;left:0;}
+.apt_tabmenu > ul > li > a:before {content:"";display: none;width:8px; height:8px;background: #e20d3a;border-radius:50%; position:absolute;top:0;left:5%;}
+.apt_tabmenu > ul > li:first-child > a:before {left: 2%;}
 .apt_tabmenu > ul > li.active > a{color:#404040;} 
 .apt_tabmenu > ul > li.active > a:before {display: block;}
 
@@ -318,14 +321,31 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
 .apt ul li img {width: 64px; height:64px;}
 .apt ul li h5 {color: #404040;font-weight: normal;margin: 15px 0 10px;font-size: 16px;}
 .apt ul li span {font-size: 13px;color: #808080;}
-.apt ol {padding:0 15px;}
+.apt ol {padding:0 15px;position:relative;overflow: hidden;margin-bottom: 60px;}
+.apt ol:before {content:"";display: block; width: 2px; height:90%; position:absolute;top:0; left:21px; background:url(../images/contents/line_apt_ol.png) 0 0 repeat-y; ;}
 .apt ol li:first-child {margin-top: 0;}
 .apt ol li {padding-left: 85px;margin-top: 50px;position:relative;}
-.apt ol li:before {content:"";display: block;width: 15px; height:15px; background: url(../images/contents/bullet_apt_process.png) 0 0 no-repeat;background-size:cover;position:absolute;top:6px;left:0;}
+.apt ol li:before {content:"";display: block;width: 15px; height:68px;background: url(../images/contents/bullet_apt_process.jpg) 0 0 no-repeat;position:absolute;top:-20px;left:0;}
 .apt ol li strong {font-size:20px;font-family: "Montserrat" ;font-weight: 700;color: #404040; position:absolute;top:0;left:45px;}
-.apt ol li h5 {font-size: 16px;color: #404040;padding-bottom: 10px;}
+.apt ol li h5 {font-size: 16px;color: #404040;padding-bottom: 10px;font-weight: normal;}
 .apt ol li p {font-size: 14px; color: #808080;padding-bottom: 10px;}
 .apt ol li img {width: 36px; height:36px;}
+.apt_recommend_spec h4 {color: #404040; font-size: 20px; padding-bottom: 30px;position:relative}
+.apt_recommend_spec h4.side_line:after {content:"";display: block;width: 100%; height:1px; background: #e5e5e5;position:absolute;top:12px; right:0;}
+.apt_recommend_spec h4.side_line span {display: inline-block; z-index: 1;background:#f5f5f5 ;padding-right: 10px;position: relative;}
+
+/* 아파트 트렌드 */
+.apt_trend {padding-top: 60px;}
+.apt_trend li {padding-bottom: 40px; border-bottom: 1px solid #e6e6e6;margin-bottom: 40px;}
+.apt_trend li:last-child {padding: 0;border: none;margin: 0;}
+.apt_trend h4 {padding-bottom: 40px;position:relative}
+.apt_trend h4:after {content:"";display: block;width: 100%; height:1px; background: #e5e5e5;position:absolute;top:12px; right:0;}
+.apt_trend h4 span {color: #404040; font-size: 20px;display: inline-block; z-index: 1;background:#f5f5f5 ;padding-right: 10px;position: relative;}
+.apt_trend h5 {color: #404040;font-family:"Montserrat";font-size: 28px; font-weight: 800;margin-bottom: 20px;}
+.apt_trend p {padding: 30px 0;color: #808080;}
+.apt_trend .img_box img + img {padding-top: 5px;}
+.apt_trend .apt_img_area img {width: 48%;}
+.apt_trend .apt_img_area img + img {margin-left: 3%;}
 
 
 
