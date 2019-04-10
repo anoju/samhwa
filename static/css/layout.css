@@ -5,12 +5,13 @@
 .inner.gray{background:#f5f5f5;border-bottom:1px solid #dbdbdb;}
 .inner.gray:last-child{border-bottom:0 none;}
 .inner:after{content:'';display:block;clear:both;}
+hr.line{margin:0 -30px;border-top:1px solid #dbdbdb;height:9px;background:#ebebeb;}
 
 /*header*/
-#header{position:absolute;top:0;left:0;right:0;z-index:10;height:50px;z-index:5;-webkit-transition:background 0.3s ease;transition:background 0.3s ease;}
-#header.fixed{position:fixed;background:rgba(255,255,255,0.5);}
+#header{position:absolute;top:0;left:0;right:0;z-index:10;height:50px;z-index:15;-webkit-transition:background 0.3s ease;transition:background 0.3s ease;}
+#header.fixed{position:fixed;background:rgba(255,255,255,0.8);}
 #header.fixed.type2{background:transparent;}
-#header.fixed.type2.on{background:rgba(255,255,255,0.5);;}
+#header.fixed.type2.on{background:rgba(255,255,255,0.8);;}
 .gnb_open #header.fixed.on{background:rgba(255,255,255,1);}
 #logo{position:absolute;left:50%;top:13px;margin-left:-33.5px;}
 .gnb_wrap .logo{position:absolute;left:50%;top:13px;margin-left:-33.5px;}

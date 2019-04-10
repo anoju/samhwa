@@ -226,11 +226,11 @@
 					</ul>
 				</div>
 			</div>
-			<hr class="hr">
+			<hr>
 			<h3 class="main_tit">Samhwa <br>SNS & News</h3>
 			<div class="cont">
 				<div class="main_video"><!-- 2019-04-09: 클래스명 변경 -->
-					<a href="#">
+					<a href="https://www.youtube.com/embed/2S24-y0Ij3Y" class="btn_popVideo">
 						<div class="img"><img src="../static/images/main/video_img.png" alt=""></div>
 						<div class="tit">올해의 컬러를 담은 집꾸미기 영상</div>
 					</a>
@@ -290,7 +290,7 @@
 <!-- //wrap -->
 
 <!-- popup -->
-<div id="popMain" class="pop_wrap transparent">
+<div id="popMain" class="pop_wrap transparent" style="display:block;">
 	<article class="popup">
 		<div class="pop_cont">
 			<div class="img_box out"><a href=""><img src="../static/images/main/Layer_img.png" alt=""></a></div>
@@ -311,7 +311,7 @@
 			<!-- <div class="img_box out"><img src="../static/images/main/Layer_video_img.png" alt=""></div> -->
 			<div class="img_box out">
 				<div class="video">				
-					<iframe src="https://www.youtube.com/embed/2S24-y0Ij3Y?rel=0&amp;autoplay=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+					<!-- <iframe src="https://www.youtube.com/embed/2S24-y0Ij3Y?rel=0&amp;autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe> -->
 				</div>
 			</div>
 			<div class="pop_video_cont">
@@ -363,6 +363,16 @@ $(function(){
 	$('.btn_top_banner').click(function(e){
 		e.preventDefault();
 		$(this).closest('.top_banner').slideUp();
+	});
+
+	$('.btn_popVideo').click(function(e){
+		e.preventDefault();
+		var $href = $(this).attr('href');
+		$('#popVideo .video').html('<iframe src="'+$href+'?rel=0&amp;autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+		popOpen('#popVideo');
+	});
+	$('#popVideo .btn_pop_close').click(function(e){
+		$('#popVideo .video').html('');
 	});
 });
 </script>
