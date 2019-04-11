@@ -400,7 +400,7 @@ hr.line + .paging{margin-top:25px;}
 .pd_view_top .dl dt{font-size:34px;}
 .pd_view_top .dl dd{color:#404040;}
 .pd_view_top .dl .mark{margin-top:15px;}
-.pd_view_top .dl .mark img{height:30px;margin-right:5px;}
+.pd_view_top .dl .mark img{height:30px;margin-right:5px;width:auto;}
 .pd_view_top .btn_share{position:relative;text-align:right;overflow:hidden;margin-top:50px;}
 .pd_view_top .btn_share a,
 .pd_view_top .btn_share button{position:relative;display:inline-block;padding:0 25px 0 10px;font-size:14px;color:#808080;background:url(../images/contents/ico_btn_share.png) no-repeat right center;background-size:14px auto;}
