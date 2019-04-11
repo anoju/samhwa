@@ -16,27 +16,32 @@ $(document).ready(function(){
 	btnUI();
 	tabUI();
 	toggleUI('.btn_toggle_01', false);
-	lnbSwiper();
 	scrollItem();
 	
 	$(window).load(function(){
 		$(window).resize();
 	});
-});
 
-var lnbSwiper = function(){
-	$('.lnb_swiper').swiper({		
-			calculateHeight: true,
-			slidesPerView: 'auto'
-	});
-	$('.lnb_swiper a').each(function(){
-		var $lnbTxt = $(this).text(),
-			$titTxt = $('.lnb_tit').text();
-		if($lnbTxt == $titTxt){
-			$(this).parents('li').addClass('on');
+	$('.iframe').iFrameSizer({
+		log                    : true,  // For development
+		autoResize             : true,  // Trigering resize on events in iFrame
+		contentWindowBodyMargin: 8,     // Set the default browser body margin style (in px)
+		doHeight               : true,  // Calculates dynamic height
+		doWidth                : false, // Calculates dynamic width
+		enablePublicMethods    : true,  // Enable methods within iframe hosted page 
+		interval               : 0,     // interval in ms to recalculate body height, 0 to disable refreshing
+		scrolling              : false, // Enable the scrollbars in the iFrame
+		callback               : function(messageData){ // Callback fn when message is received
+   /*          $('p#callback').html(
+				  '<b>Frame ID:</b> '    + messageData.iframe.id +
+				  ' <b>Height:</b> '     + messageData.height +
+				  ' <b>Width:</b> '      + messageData.width + 
+				  ' <b>Event type:</b> ' + messageData.type
+			 );
+			 */
 		}
-	});
-};
+   });
+});
 
 var preLoading = function(){
 	var isAppPreLoading = sessionStorage.getItem('isPreLoading'),
@@ -157,6 +162,7 @@ var headerUI = function(){
 	$('.btn_search_close').on('click',function(e){
 		e.preventDefault();
 		$('body').removeClass('search_open');
+		$('html,body').scrollTop(0);
 	});
 	
 
@@ -441,15 +447,31 @@ var tabUI = function(){
 				var $this = $(this),
 					$thisTop = $this.offset().top,
 					$height = $this.outerHeight(),
-					$st = Math.floor($thisTop);
+					$st = Math.floor($thisTop) + $height;
+				
+				$this.css('height',$height);
 				if($st <= $scrollTop){
-					$this.addClass('fixed').css('height',$height);
+					$this.addClass('fixed');
 				}else{
-					$this.removeClass('fixed').removeAttr('style');
+					$this.removeClass('fixed');
 				}
 			});
 		});
 	}
+
+	$('.tabmenu.swiper-container').swiper({		
+		calculateHeight: true,
+		slidesPerView: 'auto',
+		//resizeReInit: true,
+		onFirstInit: function(swiper){
+			var $width = swiper.wrapper.clientWidth;
+			$(swiper.wrapper).css('width',$width+1);
+		},
+		onInit: function(swiper){
+			var $width = swiper.wrapper.clientWidth;
+			$(swiper.wrapper).css('width',$width+1);
+		}
+	});
 
 	$(window).load(function(){
 		var $href = location.href;
