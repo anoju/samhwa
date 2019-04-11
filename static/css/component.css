@@ -6,7 +6,8 @@
 #skipNavi a:focus, #skipNavi a:hover{top:0px;}
 
 /* btnTop */
-#btnTop{position:absolute;left:50%;top:-75px;width:45px;height:45px;margin-left:-22.5px;background:url(../images/common/btn_top.png) no-repeat;background-size:contain;overflow:hidden;font-size:0;color:transparent;}
+#btnTop, .popBtnTop{display:block;position:absolute;left:50%;top:-75px;width:45px;height:45px;margin-left:-22.5px;background:url(../images/common/btn_top.png) no-repeat;background-size:contain;overflow:hidden;font-size:0;color:transparent;}
+.popBtnTop{position:static;margin:55px auto 0;}
 
 /* title */
 [class*='tit_h']{position:relative;margin:15px 0 7px;}

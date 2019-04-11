@@ -214,6 +214,11 @@ var footerUI = function(){
 		e.preventDefault();
 		$('html,body').animate({'scrollTop':0},500);
 	});
+	$('.popBtnTop').on('click',function(e){
+		e.preventDefault();
+		$(this).closest('.pop_wrap').animate({'scrollTop':0},500);
+	});
+	
 };
 
 var htmlInclude = function(){
