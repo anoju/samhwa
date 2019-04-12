@@ -68,7 +68,7 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
 
 /* 게시판 상세 */
 [class*=_view]{padding-top: 60px;}
-[class*=_view] img{width: 100%;}
+[class*=_view] img{max-width:100%;height:auto;}
 [class*=_view] .cont{color:#808080;}
 [class*=_view] .top_area {position:relative;margin-bottom:30px;}
 [class*=_view] h3{position:relative;font-weight: normal;color:#404040;font-size: 16px;}
@@ -297,7 +297,11 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
 .tabmenu2 > ul > li.active > a{color:#404040;} 
 .tabmenu2 > ul > li.active > a:before {display: block;}
 
+<<<<<<< HEAD
 /* 아파트도장 */
+=======
+/* 아파트 트렌드 */
+>>>>>>> ac11f57c45fc00e48e7a4e24f8115f7620aab651
 .apt_down_area {padding: 40px 0;color: #404040;position:relative;}
 .apt_down_area span {font-size: 14px;}
 .apt_down_area span i {display: inline-block;margin-left: 8px;width:12px; height:12px; background:url(../images/ico/ico_download2.png) 0 0 no-repeat;background-size:cover;vertical-align:middle;}
@@ -348,6 +352,11 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
 .cr_case_wrap li p {padding-bottom: 20px;}
 .cr_case_wrap .button {padding-right:40px;}
 .cr_case_wrap .button:after {content:"";display: block;background: url(../images/ico/ico_arrow.png) 0 0 no-repeat;width:16px; height:5px;position:absolute;top:15px;right:15px;}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ac11f57c45fc00e48e7a4e24f8115f7620aab651
 
 
 
@@ -440,6 +449,22 @@ hr.line + .paging{margin-top:25px;}
 .data_tbl .tit + div{margin-top:5px;}
 .data_tbl_more{display:block;position:absolute;top:7px;right:0;width:13px;height:13px;font-size:0;color:transparent;background:url(../images/ico/ico_more.png) no-repeat;background-size:contain;}
 .btn_txt_down{display:inline-block;font-size:16px;color:#e20d3a;padding-right:24px;background:url(../images/ico/ico_txt_download_r.png) no-repeat right center;background-size:15px auto;}
+
+.location_list{margin-left:-30px;margin-right:-30px;color:#404040;}
+.list_info + .location_list{border-top:1px solid #e5e5e5;}
+.location_list li{padding:30px;border-bottom:1px solid #e5e5e5;}
+.location_list .tit{font-weight:bold;font-size:18px;}
+.location_list .txt{min-height:2.8em;margin-top:5px;}
+.location_list .info{margin-top:8px;display:flex;justify-content:space-between;align-items: center;}
+.location_list .info > span:first-child{font-size:14px;color:#808080;}
+.location_list .tel{display:inline-block;font-size:14px;border-bottom:1px solid #808080;color:#808080;font-family:'Montserrat';}
+.location_list + hr.line{margin-top:-1px;}
+.location_list .cont{margin-top:25px;font-size:14px;color:#808080;}
+.location_list .cont p + p{margin-top:1.4em;}
+.location_list img{width:100%;}
+.btn_map{display:inline-block;padding-right:20px;color:#e20d3a;font-size:12px;line-height:16px;background:url(../images/ico/ico_pin.png) no-repeat right center;background-size:auto 16px;}
+
+
 
 /* main */
 .top_banner{position:relative;}

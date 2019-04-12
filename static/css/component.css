@@ -321,13 +321,13 @@ input:checked + .btn_radio.bg4, .btn_radio.bg4.on{background-image:url(../images
 input:checked + .btn_radio.bg5, .btn_radio.bg5.on{background-image:url(../images/contents/rdo_paint_type5.png);}
 input:checked + .btn_radio.bg6, .btn_radio.bg6.on{background-image:url(../images/contents/rdo_paint_type6.png);}
 input:checked + .btn_radio.bg7, .btn_radio.bg7.on{background-image:url(../images/contents/rdo_paint_type7.png);}
-input:checked + .btn_radio.bg8, .btn_radio.bg8.on{background-image:url(../images/contents/rdo_paint_type1.png);}
-input:checked + .btn_radio.bg9, .btn_radio.bg9.on{background-image:url(../images/contents/rdo_paint_type1.png);}
-input:checked + .btn_radio.bg10, .btn_radio.bg10.on{background-image:url(../images/contents/rdo_paint_type1.png);}
-input:checked + .btn_radio.bg11, .btn_radio.bg11.on{background-image:url(../images/contents/rdo_paint_type1.png);}
-input:checked + .btn_radio.bg12, .btn_radio.bg12.on{background-image:url(../images/contents/rdo_paint_type1.png);}
-input:checked + .btn_radio.bg13, .btn_radio.bg13.on{background-image:url(../images/contents/rdo_paint_type1.png);}
-input:checked + .btn_radio.bg14, .btn_radio.bg14.on{background-image:url(../images/contents/rdo_paint_type1.png);}
+input:checked + .btn_radio.bg8, .btn_radio.bg8.on{background-image:url(../images/contents/rdo_paint_type8.png);}
+input:checked + .btn_radio.bg9, .btn_radio.bg9.on{background-image:url(../images/contents/rdo_paint_type9.png);}
+input:checked + .btn_radio.bg10, .btn_radio.bg10.on{background-image:url(../images/contents/rdo_paint_type10.png);}
+input:checked + .btn_radio.bg11, .btn_radio.bg11.on{background-image:url(../images/contents/rdo_paint_type11.png);}
+input:checked + .btn_radio.bg12, .btn_radio.bg12.on{background-image:url(../images/contents/rdo_paint_type12.png);}
+input:checked + .btn_radio.bg13, .btn_radio.bg13.on{background-image:url(../images/contents/rdo_paint_type13.png);}
+input:checked + .btn_radio.bg14, .btn_radio.bg14.on{background-image:url(../images/contents/rdo_paint_type14.png);}
 
 .select_list,
 .ui-select{position:relative;display:inline-block;width:100%;border:1px solid #ccc;background:#fff;vertical-align:middle;box-sizing:border-box;font-size:16px;line-height:1.5;text-align:left;}
