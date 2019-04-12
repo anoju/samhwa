@@ -293,6 +293,11 @@ input.focus + .input_del{opacity:1;z-index:1;-webkit-transition-delay:0s;transit
 .button.gray{background:#404040;border-color:#404040;color:#fff;}
 .button.gray2{background:#ebebeb;border-color:#ebebeb;color:#404040;}
 .button.gray3{background:none;border-color:#b2b2b2;color:#404040;}
+.button.gray4{background:#736e6e;border-color:#736e6e;color:#fff;}
+.button.brown {background: #806e5d;border-color: #806e5d;color:#fff;}
+.button.gray_navy {background: #747483;border-color: #747483;color:#fff;}
+.button.beige {background: #d2a672;border-color: #d2a672;color:#fff;}
+.button.skyblue {background: #8bb1bb;border-color: #8bb1bb;color:#fff;}
 
 .btn_toggle{position:relative;display:block;width:100%;padding:0;border:0 none;background:none;text-align:center;overflow:hidden;}
 .btn_toggle:after{content:'';display:inline-block;width:15px;height:15px;margin-left:8px;background:url(../images/ico/ico_toggle.png) no-repeat center center;background-size:11px  auto;-webkit-transition:0.3s;transition:0.3s;vertical-align:0;}
