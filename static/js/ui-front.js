@@ -17,6 +17,7 @@ $(document).ready(function(){
 	tabUI();
 	toggleUI('.btn_toggle_01', false);
 	scrollItem();
+	if($('.ui-scroll-on').length > 0)scrollOn();
 	
 	$(window).load(function(){
 		$(window).resize();
@@ -426,6 +427,7 @@ var btnUI = function(){
 };
 
 /* tab 기능 */
+var tabSwiper;
 var tabUI = function(){
 	var $onText = '<span class="blind">현재위치</span>';
 
@@ -468,7 +470,7 @@ var tabUI = function(){
 		});
 	}
 
-	$('.tabmenu.swiper-container').swiper({		
+	tabSwiper = $('.tabmenu.swiper-container').swiper({		
 		calculateHeight: true,
 		slidesPerView: 'auto',
 		//resizeReInit: true,
@@ -592,6 +594,38 @@ var scrollItem = function(){
 		});
 	}
 };
+
+function scrollOn(){
+	var tar = '.cr_case_wrap li',
+		navi = '.ui-scroll-on';
+
+	$('.ui-scroll-on a').click(function(e){
+		e.preventDefault();
+		var $idx = $(this).closest('li').index();
+			$scrollTop = ($(tar).eq($idx).offset().top) - 121;
+		$('html').animate({'scrollTop':$scrollTop},300);
+	});
+
+	$(window).bind('scroll resize',function(){
+		var winH = $(window).height(),
+			scrollTop = $(this).scrollTop(),
+			center = scrollTop+(winH/2);
+		var idxArry  = [];
+		$(tar).each(function(e){
+			var secH = $(this).outerHeight(),
+				secS = $(this).offset().top;
+			
+			if(center >= secS){
+				idxArry.push(e)
+			}
+		});
+		var $idxMax = Math.max.apply(null, idxArry);
+
+		$(navi).find('.swiper-slide').eq($idxMax).addClass('on').siblings().removeClass('on');
+		$(tar).eq($idxMax).addClass('on').siblings().removeClass('on');
+		tabSwiper.swipeTo($(navi).find('.swiper-slide.on').index());
+	});	
+}
 
 /********************************
 ** plugins **
