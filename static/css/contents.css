@@ -297,11 +297,7 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
 .tabmenu2 > ul > li.active > a{color:#404040;} 
 .tabmenu2 > ul > li.active > a:before {display: block;}
 
-<<<<<<< HEAD
 /* 아파트도장 */
-=======
-/* 아파트 트렌드 */
->>>>>>> ac11f57c45fc00e48e7a4e24f8115f7620aab651
 .apt_down_area {padding: 40px 0;color: #404040;position:relative;}
 .apt_down_area span {font-size: 14px;}
 .apt_down_area span i {display: inline-block;margin-left: 8px;width:12px; height:12px; background:url(../images/ico/ico_download2.png) 0 0 no-repeat;background-size:cover;vertical-align:middle;}
@@ -352,13 +348,14 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
 .cr_case_wrap li p {padding-bottom: 20px;}
 .cr_case_wrap .button {padding-right:40px;}
 .cr_case_wrap .button:after {content:"";display: block;background: url(../images/ico/ico_arrow.png) 0 0 no-repeat;width:16px; height:5px;position:absolute;top:15px;right:15px;}
-<<<<<<< HEAD
-=======
 
-
->>>>>>> ac11f57c45fc00e48e7a4e24f8115f7620aab651
-
-
+/* 시공사례 */
+.pop_cont .business_case_list {border-top: 1px solid #e6e6e6;}
+.business_case_list li {padding:40px 0 ; border-bottom: 1px solid #e6e6e6;}
+.business_case_list li:last-child {border:none;}
+.business_case_list li h2 {font-size: 20px;padding-bottom: 20px;}
+.business_case_list li h3 {font-size: 18px; padding:20px 0 ;}
+.business_case_list li p {font-size: 14px; color: #808080;}
 
 
 
@@ -382,7 +379,7 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
 .product_type img{width:100%;}
 .product_type figcaption{padding:9px;color:#fff;font-size:16px;font-weight:bold;white-space:nowrap;}
 
-.list_info{padding:15px 0;font-size:14px;color:#808080;}
+.list_info{padding:15px 0;font-size:14px;color:#404040;}
 .list_info strong{color:#404040;}
 .pr_list{margin:0 -30px;}
 .pr_list li{padding:30px;position:relative;border-top:1px solid #e5e5e5;color:#404040;}

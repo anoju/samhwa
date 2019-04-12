@@ -43,11 +43,3 @@ body.pop_open{overflow:hidden;}
 .pop_video_cont{color:#fff;margin-top:28px;}
 .pop_video_cont .tit{font-size:18px;}
 .pop_video_cont .date{font-size:12px;margin-top:10px;}
-
-/* popup contents - 시공사례 */
-.pop_businessCase_list {border-top: 1px solid #e6e6e6;}
-.pop_businessCase_list li {padding:40px 0 ; border-bottom: 1px solid #e6e6e6;}
-.pop_businessCase_list li:last-child {border:none;}
-.pop_businessCase_list li h2 {font-size: 20px;padding-bottom: 20px;}
-.pop_businessCase_list li h3 {font-size: 18px; padding:20px 0 ;}
-.pop_businessCase_list li p {font-size: 14px; color: #808080;}
