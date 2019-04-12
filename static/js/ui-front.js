@@ -150,7 +150,7 @@ var headerUI = function(){
 		$(this).parent().toggleClass('on').siblings().removeClass('on').find('ul').slideUp();
 	});
 
-	//
+	//헤더 검색버튼
 	$('.head_search').click(function(e){
 		e.preventDefault();
 		if($('body').hasClass('search_open')){	
@@ -158,6 +158,7 @@ var headerUI = function(){
 		}else{	
 			$('body').addClass('search_open');
 		}
+		$('html,body').scrollTop(0);
 	});
 	$('.btn_search_close').on('click',function(e){
 		e.preventDefault();
@@ -234,7 +235,10 @@ var htmlInclude = function(){
 				if(sta == "success"){
 					console.log('Include '+$htmlLast+'!');
 					$this.children().unwrap();
-					if($htmlLast == 'header.html')headerUI();
+					if($htmlLast == 'header.html'){
+						headerUI();
+						$(window).resize();
+					}
 					if($htmlLast == 'footer.html')footerUI();
 				}
 			});  
