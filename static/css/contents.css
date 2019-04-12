@@ -286,7 +286,7 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
 .col_design_ct_intro ul li p {font-size: 18px;}
 .col_design_ct_intro p strong span {color: #404040;}
 
-/* 아파트도장 */
+/* 탭메뉴 */
 .tabmenu2 {padding-bottom: 20px;}
 .tabmenu2 > ul{position:relative;display:table;width:100%;table-layout:fixed;border-collapse:collapse;}
 .tabmenu2 > ul > li {display:table-cell;vertical-align:middle;box-sizing:border-box;padding-left: 4%;}
@@ -297,8 +297,7 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
 .tabmenu2 > ul > li.active > a{color:#404040;} 
 .tabmenu2 > ul > li.active > a:before {display: block;}
 
-/* ------------------------------------------여기까지 4/8에 넘김 */
-
+/* 아파트 트렌드 */
 .apt_down_area {padding: 40px 0;color: #404040;position:relative;}
 .apt_down_area span {font-size: 14px;}
 .apt_down_area span i {display: inline-block;margin-left: 8px;width:12px; height:12px; background:url(../images/ico/ico_download2.png) 0 0 no-repeat;background-size:cover;vertical-align:middle;}
@@ -339,6 +338,16 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
 .apt_trend .apt_img_area img {width: 48%;}
 .apt_trend .apt_img_area img + img {margin-left: 3%;}
 
+/* 시공사례 */
+.cr_case_wrap {padding-top: 60px;color:#808080;}
+.cr_case_wrap li {position:relative;box-shadow: 0 10px 30px rgba(0,0,0,0.1)}
+.cr_case_wrap li + li {margin-top: 60px;}
+.cr_case_wrap li h3 {position: absolute;top:30px;left:30px;color: #fff;font-size: 20px;z-index: 2; border-bottom:1px solid #fff;}
+.cr_case_wrap li .txt_box {background: #fff;padding:30px;}
+.cr_case_wrap li h4 {font-size: 18px;color:#404040;margin-bottom: 20px;}
+.cr_case_wrap li p {padding-bottom: 20px;}
+.cr_case_wrap .button {padding-right:40px;}
+.cr_case_wrap .button:after {content:"";display: block;background: url(../images/ico/ico_arrow.png) 0 0 no-repeat;width:16px; height:5px;position:absolute;top:15px;right:15px;}
 
 
 
