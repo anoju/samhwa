@@ -63,8 +63,8 @@
 span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
 .file_list {margin-top: 35px;}
 .file_list li + li {margin-top: 10px;}
-.file_list .button {padding-right: 40px;}
-.file_list .button:after {content:""; display: block;width: 11px; height:10px; background: url(../images/ico/ico_download.png)0 0 no-repeat; position:absolute;top:14px;right:14px;background-size:cover;}
+.file_list .button {max-width:100%;white-space:initial;text-align: left;padding: 10px 40px 10px 15px; line-height: initial;}
+.file_list .button:after {content:""; display: block;width: 11px; height:10px; background: url(../images/ico/ico_download.png)0 0 no-repeat; position:absolute;top:50%;margin-top: -5px;;right:14px;background-size:cover;}
 
 /* 게시판 상세 */
 [class*=_view]{padding-top: 60px;}
@@ -335,8 +335,9 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
 .apt_trend h5 {color: #404040;font-family:"Montserrat";font-size: 28px; font-weight: 800;margin-bottom: 20px;}
 .apt_trend p {padding: 30px 0;color: #808080;}
 .apt_trend .img_box img + img {padding-top: 5px;}
-.apt_trend .apt_img_area img {width: 48%;}
-.apt_trend .apt_img_area img + img {margin-left: 3%;}
+.apt_trend .apt_img_area {overflow: hidden;}
+.apt_trend .apt_img_area img {width: 48%;float:left}
+.apt_trend .apt_img_area img + img {margin-left: 4%;float:right;}
 
 /* 시공사례 */
 .cr_case_wrap {padding-top: 60px;color:#808080;}
