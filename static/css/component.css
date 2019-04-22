@@ -481,3 +481,13 @@ input:checked + .btn_radio.bg14, .btn_radio.bg14.on{background-image:url(../imag
 .dot_list.type2 > li{margin:5px 0;}
 .dot_list.white> li {color:#fff;}
 .dot_list.white> li:before{background:#fff;}
+
+.ui-swiper{position:relative;}
+.ui-swiper .pagination{position:absolute;left:0;width:100%;height:5px;bottom:10px;text-align:center;z-index:2;}
+.ui-swiper .pagination span{display:inline-block;width:5px;height:5px;border-radius:50%;background:#fff;opacity:0.5;margin:0 3px;vertical-align:top;}
+.ui-swiper .pagination .swiper-active-switch{opacity:1;}
+.ui-swiper .ui-prev,
+.ui-swiper .ui-next{display:block;font-size:0;position:absolute;top:0;height:100%;width:30px;background-repeat:no-repeat;background-position:center center;background-size:7px auto;}
+.ui-swiper .ui-prev{left:-30px;background-image:url(../images/common/ui-swiper-prev.png);}
+.ui-swiper .ui-next{right:-30px;background-image:url(../images/common/ui-swiper-next.png);}
+.ui-swiper .disabled{opacity:0.3;}

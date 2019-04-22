@@ -165,7 +165,7 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
 .about h4 img {width: 93px;}
 .about > p {color: #808080;}
 .about table {margin-top: 40px;}
-.about table th {padding: 10px 5px;color: #e20d3a;background: #f7c4f7;font-weight: normal;font-size: 14px;text-align: left;}
+.about table th {padding: 10px 5px;color: #e20d3a;font-weight: normal;font-size: 14px;text-align: left;}
 .about table td {padding: 10px 25px;color: #404040;font-size: 14px;}
 .about table tr:first-child th {border-top: 1px solid #e20d3a;}
 .about table tr:first-child td {border-top: 1px solid #e6e6e6;}
@@ -174,7 +174,7 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
 .about h3 {margin: 60px 0 30px;font-size: 34px; color: #404040;}
 .about .company_info {padding: 20px 0;border: solid #e6e6e6;border-width: 1px 0 1px;margin:40px 0 ;position:relative}
 .about .company_info:before {content:"";display: block;width:60px ;height:1px;background: #e20d3a;position:absolute;top:-1px;left:0;}
-.about .company_info dl {display: inline-block; vertical-align:top;width: 49.5%;}
+.about .company_info dl {display: inline-block; vertical-align:top;width:50%;}
 .about .company_info dl:first-child,
 .about .company_info dl:nth-child(2) {padding-bottom: 20px;}
 .about .company_info dl dt {font-size: 14px; color: #e20d3a;padding-bottom: 10px;}
@@ -287,11 +287,11 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
 .col_design_ct_intro p strong span {color: #404040;}
 
 /* 탭메뉴 */
-.tabmenu2 {padding-bottom: 20px;}
-.tabmenu2 > ul{position:relative;display:table;width:100%;table-layout:fixed;border-collapse:collapse;}
-.tabmenu2 > ul > li {display:table-cell;vertical-align:middle;box-sizing:border-box;padding-left: 4%;}
-.tabmenu2 > ul > li:first-child{padding-left: 0;}
-.tabmenu2 > ul > li > a{position:relative;display:block;padding-top:18px ;font-weight:bold;color:#b2b2b2;}
+.tabmenu2 {padding-bottom: 20px;overflow:auto;white-space:nowrap;}
+.tabmenu2 > ul{position:relative;font-size:0;}
+.tabmenu2 > ul > li {display:inline-block;vertical-align:middle;box-sizing:border-box;margin-left:17px;}
+.tabmenu2 > ul > li:first-child{margin-left:0;}
+.tabmenu2 > ul > li > a{position:relative;display:block;padding-top:18px ;font-weight:bold;color:#b2b2b2;font-size:16px;}
 .tabmenu2 > ul > li > a:before {content:"";display: none;width:8px; height:8px;background: #e20d3a;border-radius:50%; position:absolute;top:0;left:5%;}
 .tabmenu2 > ul > li:first-child > a:before {left: 2%;}
 .tabmenu2 > ul > li.active > a{color:#404040;} 
@@ -437,7 +437,7 @@ hr.line + .paging{margin-top:25px;}
 .data_tbl_wrap + .paging{margin-top:30px;}
 .data_tbl_tit{font-size:18px;font-weight:bold;padding-right:15px;padding-bottom:15px;}
 .data_tbl{border-top:1px solid #404040;}
-.data_tbl th, td{border-bottom:1px solid #e6e6e6;font-size:12px;color:#808080;padding:10px 0;font-weight:normal;}
+.data_tbl th, .data_tbl td{border-bottom:1px solid #e6e6e6;font-size:12px;color:#808080;padding:10px 0;font-weight:normal;}
 .data_tbl td{padding:20px 0;}
 .data_tbl th:last-child,
 .data_tbl td:last-child{text-align:right;}
@@ -450,7 +450,7 @@ hr.line + .paging{margin-top:25px;}
 
 .location_list{margin-left:-30px;margin-right:-30px;color:#404040;}
 .list_info + .location_list{border-top:1px solid #e5e5e5;}
-.location_list li{padding:30px;border-bottom:1px solid #e5e5e5;}
+.location_list > ul > li{padding:30px;border-bottom:1px solid #e5e5e5;}
 .location_list .tit{font-weight:bold;font-size:18px;}
 .location_list .txt{min-height:2.8em;margin-top:5px;}
 .location_list .info{margin-top:8px;display:flex;justify-content:space-between;align-items: center;}
@@ -458,6 +458,7 @@ hr.line + .paging{margin-top:25px;}
 .location_list .tel{display:inline-block;font-size:14px;border-bottom:1px solid #808080;color:#808080;font-family:'Montserrat';}
 .location_list + hr.line{margin-top:-1px;}
 .location_list .cont{margin-top:25px;font-size:14px;color:#808080;}
+.location_list .cont .ui-swiper{margin-bottom:1.4em;}
 .location_list .cont p + p{margin-top:1.4em;}
 .location_list img{width:100%;}
 .btn_map{display:inline-block;padding-right:20px;color:#e20d3a;font-size:12px;line-height:16px;background:url(../images/ico/ico_pin.png) no-repeat right center;background-size:auto 16px;}

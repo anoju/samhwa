@@ -12,6 +12,7 @@ $(document).ready(function(){
 	commonUI();
 	etcUI();
 	popupUI();
+	swiperInit();
 	
 	btnUI();
 	tabUI();
@@ -386,6 +387,75 @@ var popClose = function(tar){
 	});
 };
 
+/* 다중 Swiper */
+var swiperInit = function(){
+	if($('.ui-swiper').length > 0)multiSwiper('.ui-swiper');
+};
+var multiSwiper = function (tar){
+	console.log('aaa')
+	var sliders = [];
+	$(tar).each(function(i, element){
+		var $list = $(this).find('.swiper-container'),
+			$prev = $(this).find('.ui-prev'),
+			$next = $(this).find('.ui-next'),
+			$pagination = $(this).find('.pagination'),
+			$length = $list.find('.swiper-slide').length;
+
+		//console.log($length);
+
+		$list.addClass('ui-swipe-s'+i);
+		if($prev.length > 0){
+			$prev.addClass('ui-swipe-l'+i);
+		}
+		if($next.length > 0){
+			$next.addClass('ui-swipe-r'+i);
+		}
+		if($pagination.length > 0){
+			$pagination.addClass('ui-swipe-p'+i);
+		}
+		var slider = new Swiper('.ui-swipe-s'+i, {
+			//slidesPerView:'auto',
+			calculateHeight:true,
+			pagination:'.ui-swipe-p'+i,
+			paginationClickable : true,
+			resizeReInit:true,
+			onInit:function(swiper){
+				var wid = $(swiper.container).width(),
+					wid2 = $(swiper.container).find('.swiper-wrapper').width();
+				$('.ui-swipe-l'+i).addClass('disabled');
+				if(wid >= wid2){
+					$('.ui-swipe-r'+i).addClass('disabled');
+				}
+			},
+			onSlideChangeStart: function(swiper){
+				var $i = swiper.activeIndex,
+					$l = swiper.visibleSlides.length;
+				if($i == 0){
+					$('.ui-swipe-l'+i).addClass('disabled');
+				}else{
+					$('.ui-swipe-l'+i).removeClass('disabled');
+				}
+				if(($i+$l) == $length){
+					$('.ui-swipe-r'+i).addClass('disabled');
+				}else{
+					$('.ui-swipe-r'+i).removeClass('disabled');
+				}
+			}
+		});
+
+		sliders.push(slider);
+
+		$('.ui-swipe-l'+i).click(function(e){
+			e.preventDefault();
+			sliders[i].swipePrev();
+		});
+		$('.ui-swipe-r'+i).click(function(e){
+			e.preventDefault();
+			sliders[i].swipeNext();
+		});
+	});
+};
+
 /* btn */
 var btnUI = function(){
 	//a태그 링크 '#', '#none' 이동 방지
@@ -476,11 +546,11 @@ var tabUI = function(){
 		//resizeReInit: true,
 		onFirstInit: function(swiper){
 			var $width = swiper.wrapper.clientWidth;
-			$(swiper.wrapper).css('width',$width+1);
+			$(swiper.wrapper).css('width',$width+2);
 		},
 		onInit: function(swiper){
 			var $width = swiper.wrapper.clientWidth;
-			$(swiper.wrapper).css('width',$width+1);
+			$(swiper.wrapper).css('width',$width+2);
 		}
 	});
 
