@@ -392,7 +392,6 @@ var swiperInit = function(){
 	if($('.ui-swiper').length > 0)multiSwiper('.ui-swiper');
 };
 var multiSwiper = function (tar){
-	console.log('aaa')
 	var sliders = [];
 	$(tar).each(function(i, element){
 		var $list = $(this).find('.swiper-container'),
@@ -686,7 +685,7 @@ function scrollOn(){
 				secS = $(this).offset().top;
 			
 			if(center >= secS){
-				idxArry.push(e)
+				idxArry.push(e);
 			}
 		});
 		var $idxMax = Math.max.apply(null, idxArry);
