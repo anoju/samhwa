@@ -483,6 +483,7 @@ input:checked + .btn_radio.bg14, .btn_radio.bg14.on{background-image:url(../imag
 .dot_list.white> li:before{background:#fff;}
 
 .ui-swiper{position:relative;}
+.ui-swiper .swiper-slide img{width:100%;}
 .ui-swiper .pagination{position:absolute;left:0;width:100%;height:5px;bottom:10px;text-align:center;z-index:2;}
 .ui-swiper .pagination span{display:inline-block;width:5px;height:5px;border-radius:50%;background:#fff;opacity:0.5;margin:0 3px;vertical-align:top;}
 .ui-swiper .pagination .swiper-active-switch{opacity:1;}

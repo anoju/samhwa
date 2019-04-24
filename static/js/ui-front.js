@@ -367,6 +367,11 @@ var popOpen = function(tar,btn){
 	$(tar).fadeIn($popSpeed,function(){
 		$(this).attr({'tabindex':0}).focus();
 	});
+	if($sliders.length > 0 && $(tar).find('.ui-swiper').length > 0){
+		for(var i in $sliders){
+			$sliders[i].reInit();
+		}
+	}
 };
 var popClose = function(tar){
 	var $visible = $('.pop_wrap:visible').size();
@@ -391,8 +396,8 @@ var popClose = function(tar){
 var swiperInit = function(){
 	if($('.ui-swiper').length > 0)multiSwiper('.ui-swiper');
 };
+var $sliders = [];
 var multiSwiper = function (tar){
-	var sliders = [];
 	$(tar).each(function(i, element){
 		var $list = $(this).find('.swiper-container'),
 			$prev = $(this).find('.ui-prev'),
@@ -442,15 +447,15 @@ var multiSwiper = function (tar){
 			}
 		});
 
-		sliders.push(slider);
+		$sliders.push(slider);
 
 		$('.ui-swipe-l'+i).click(function(e){
 			e.preventDefault();
-			sliders[i].swipePrev();
+			$sliders[i].swipePrev();
 		});
 		$('.ui-swipe-r'+i).click(function(e){
 			e.preventDefault();
-			sliders[i].swipeNext();
+			$sliders[i].swipeNext();
 		});
 	});
 };
@@ -506,6 +511,12 @@ var tabUI = function(){
 			var href = $(this).attr('href');
 			$(href).addClass('on').siblings('.tab_cont').removeClass('on');
 			$(this).prepend($onText).parent().addClass('active').siblings().removeClass('active').find('.blind').remove();
+		}
+
+		if($sliders.length > 0 && $(href).find('.ui-swiper').length > 0){
+			for(var i in $sliders){
+				$sliders[i].reInit();
+			}
 		}
 
 		//웹 접근성 보완
