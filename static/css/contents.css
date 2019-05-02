@@ -456,6 +456,8 @@ hr.line + .paging{margin-top:25px;}
 .location_list .info{margin-top:8px;display:flex;justify-content:space-between;align-items: center;}
 .location_list .info > span:first-child{font-size:14px;color:#808080;}
 .location_list .tel{display:inline-block;font-size:14px;border-bottom:1px solid #808080;color:#808080;font-family:'Montserrat';}
+.location_list .tel_wrap .tel{float:left;clear:both;}
+.location_list .tel_wrap .tel + .tel{margin-top:3px;}
 .location_list + hr.line{margin-top:-1px;}
 .location_list .cont{margin-top:25px;font-size:14px;color:#808080;}
 .location_list .cont .ui-swiper{margin-bottom:1.4em;}
