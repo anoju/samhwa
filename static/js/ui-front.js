@@ -556,11 +556,11 @@ var tabUI = function(){
 		//resizeReInit: true,
 		onFirstInit: function(swiper){
 			var $width = swiper.wrapper.clientWidth;
-			$(swiper.wrapper).css('width',$width+2);
+			$(swiper.wrapper).css('width',$width+5);
 		},
 		onInit: function(swiper){
 			var $width = swiper.wrapper.clientWidth;
-			$(swiper.wrapper).css('width',$width+2);
+			$(swiper.wrapper).css('width',$width+5);
 		}
 	});
 
@@ -675,16 +675,15 @@ var scrollItem = function(){
 	}
 };
 
-var clickType = (isMobile.iOS()) ? 'touchend' : 'click';
 function scrollOn(){
 	var tar = '.cr_case_wrap li',
 		navi = '.ui-scroll-on';
 
-	$('.ui-scroll-on a').on(clickType,function(e){
+	$('.ui-scroll-on a').on('click',function(e){
 		e.preventDefault();
 		var $idx = $(this).closest('li').index();
 			$scrollTop = ($(tar).eq($idx).offset().top) - 121;
-		$('html').animate({'scrollTop':$scrollTop},300);
+		$('html,body').animate({'scrollTop':$scrollTop},300);
 	});
 
 	$(window).bind('scroll resize',function(){
