@@ -675,11 +675,12 @@ var scrollItem = function(){
 	}
 };
 
+var clickType = (isMobile.iOS()) ? 'touchend' : 'click';
 function scrollOn(){
 	var tar = '.cr_case_wrap li',
 		navi = '.ui-scroll-on';
 
-	$('.ui-scroll-on a').click(function(e){
+	$('.ui-scroll-on a').on(clickType,function(e){
 		e.preventDefault();
 		var $idx = $(this).closest('li').index();
 			$scrollTop = ($(tar).eq($idx).offset().top) - 121;
