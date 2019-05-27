@@ -306,7 +306,7 @@ input.focus + .input_del{opacity:1;z-index:1;-webkit-transition-delay:0s;transit
 .btn_link_01:after{content:'';display:block;width:25px;height:25px;position:absolute;right:15px;top:11px;background:url(../images/ico/ico_link.png) no-repeat center center;background-size:100%;}
 .btn_link_02{position:relative;display:inline-block;padding-right:25px;line-height:20px;}
 .btn_link_02:after{content:'';display:block;width:20px;height:20px;position:absolute;right:0;top:0;background:url(../images/ico/ico_link.png) no-repeat center center;background-size:100%;}
-.button.btn_down{text-align:left;font-size:14px;}
+.button.btn_down{text-align:left;font-size:14px;padding-right:40px;text-overflow:ellipsis;}
 .button.btn_down:after{content:'';position:absolute;right:20px;top:50%;width:14px;height:12px;margin-top:-6px;background:url(../images/ico/ico_download_b.png) no-repeat center center;background-size:contain;}
 .button.gray.btn_down:after{background-image:url(../images/ico/ico_download_w.png)}
 
