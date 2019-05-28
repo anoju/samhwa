@@ -5,7 +5,7 @@
    ========================================================================== */
 *,*:before,*:after{box-sizing:border-box;}
 html{height:100%;-webkit-touch-callout:none;-webkit-user-select:none;}
-body{font:normal 16px/1.4 'Noto Sans KR',sans-serif;color:#000;word-break:keep-all;/*letter-spacing:-0.05em;*/-webkit-text-size-adjust:none;text-size-adjust:none;-webkit-tap-highlight-color:transparent;-webkit-overflow-scrolling:touch;}
+body{font:normal 16px/1.4 'Noto Sans KR',sans-serif;color:#000;word-break:keep-all;letter-spacing:-0.05em;-webkit-text-size-adjust:none;text-size-adjust:none;-webkit-tap-highlight-color:transparent;-webkit-overflow-scrolling:touch;}
 body, h1, h2, h3, h4, h5, h6, fieldset, ul, ol, dl, dt, dd, p, button, figure{margin:0;padding:0;}
 legend, caption{position:absolute;overflow:hidden;width:0px;height:0px;font-size:0;line-height:0;text-indent:-9999px;color:transparent;}
 a{text-decoration:none;color:inherit;}

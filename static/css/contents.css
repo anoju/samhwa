@@ -12,13 +12,13 @@
 
 .search_wrap{position:relative;top:-30px;}
 .search_input{display:table;width:100%;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,0.1);}
-.search_input > div{display:table-cell;padding:6px;padding-right:0;}
+.search_input > div{display:table-cell;padding:6px;padding-right:0;vertical-align:middle;}
 .search_input > div:first-child{width:48px;}
 .search_input > div:last-child{display:none;width:50px;}
 .search_input.on > div:last-child{display:table-cell;}
 .search_input .button{border-width:0 0 0 1px;border-color:#f5f5f5;color:#404040;height:30px;line-height:30px;}
 .btn_search{display:inline-block;width:48px;height:48px;font-size:0;color:transparent;background:url(../images/ico/ico_search_small.png) no-repeat center center;background-size:15px auto;}
-.search_input .input{width:100%;border-color:transparent;font-size:20px;}
+.search_input .input{width:100%;border-color:transparent;font-size:20px;height:40px;line-height:38px;padding-top:0;padding-bottom:0;}
 .search_opt{margin-top:1px;margin-bottom:-30px;}
 .search_opt.type2{margin-bottom:0px;}
 .search_opt .btn .btn_toggle{display:block;padding:30px 0;line-height:28px;}
@@ -37,7 +37,7 @@
 .search_opt_dl dt{font-size:11px;color:#b2b2b2;}
 .search_opt_dl dd{margin-top:6px;}
 .search_opt_dl div{position:relative;padding:6px 0;}
-.search_opt_dl div + div:before{content:'';display:block;position:absolute;width:5px;height:3px;position:absolute;left:50%;top:0;margin:-1.5px 0 0 -2.5px;background:url(../images/contents/search_opt_dl_arr.png) no-repeat center center;background-size:contain;}
+.search_opt_dl div + div:before{content:'';display:block;position:absolute;width:5px;height:3px;position:absolute;left:50%;top:-1.5px;margin:-1.5px 0 0 -2.5px;background:url(../images/contents/search_opt_dl_arr.png) no-repeat center center;background-size:contain;}
 .search_opt_dl .btn_radio{width:120px;text-overflow:ellipsis;overflow:hidden;}
 
 .iframe{margin-top:60px;height:1000px;}
@@ -98,7 +98,8 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
 .recruit_view .cont table td {color: #404040;}
 .color_trend_view {padding-top: 60px;}
 .color_trend_view .top_area h3 {font-size: 20px;margin-bottom: 30px;}
-.data_tbl_view .top_area h3 {font-size: 20px;margin-bottom: 30px;}
+.data_tbl_view .top_area{margin-bottom:20px;}
+.data_tbl_view .top_area h3 {font-size: 20px;margin-bottom: 20px;}
 .no-data{text-align:center !important;}
 
 /* 뉴스 */
@@ -195,7 +196,7 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
 .new_prd_list li .img_box {margin-bottom: 27px;}
 .new_prd_list li .tit {padding-left:103px ;position:relative;}
 .new_prd_list li .tit p {font-size: 16px;color: #404040;height:41px;}
-.new_prd_list .box_cate {position:absolute;top:3px;left:0}
+.new_prd_list .box_cate {position:absolute;top:3px;left:0;width:77px;padding-left:0;padding-right:0;}
 
 
 /* 인재채용 */
@@ -389,6 +390,7 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
 .list_info strong{color:#404040;}
 .pr_list{margin:0 -30px;}
 .pr_list li{padding:30px;position:relative;border-top:1px solid #e5e5e5;color:#404040;}
+.pr_list li:after{content:'';display:block;clear:both;}
 .pr_list .img{float:left;width:80px;}
 .pr_list .img img{width:100%;}
 .pr_list .img + .cont{margin-left:95px;}
@@ -412,13 +414,13 @@ hr.line + .paging{margin-top:25px;}
 .pd_view .dl{margin-top:50px;}
 .pd_view .dl dt{color:#404040;}
 .pd_view .dl dd{color:#808080;}
-.pd_view_top{padding-top:0;}
+.pd_view_top{padding-top:0;}s
 .pd_view_top .flow{font-size:0;}
 .pd_view_top .flow li{display:inline-block;font-size:14px;color:#808080;}
-.pd_view_top .flow li + li:before{content:'>';margin:0 5px;font-family: sans-serif;}
+.pd_view_top .flow li + li:before{content:'';display:inline-block;width:6px;height:10px;margin:0 5px;background:url(../images/ico/ico_flow.png) no-repeat;background-size:contain;}
 .pd_view_top .dl{margin-top:10px;}
-.pd_view_top .dl dt{font-size:34px;}
-.pd_view_top .dl dd{color:#404040;}
+.pd_view_top .dl dt{font-size:34px;word-break:break-all;}
+.pd_view_top .dl dd{color:#404040;word-break:break-all;}
 .pd_view_top .dl .mark{margin-top:15px;}
 .pd_view_top .dl .mark img{height:30px;margin-right:5px;width:auto;}
 .pd_view_top .btn_share{position:relative;text-align:right;overflow:hidden;margin-top:50px;}
@@ -468,6 +470,7 @@ hr.line + .paging{margin-top:25px;}
 .location_list .cont .ui-swiper{margin-bottom:1.4em;}
 .location_list .cont p + p{margin-top:1.4em;}
 .location_list img{width:100%;}
+.location_list + .paging{margin-top:30px;}
 .btn_map{display:inline-block;padding-right:20px;color:#e20d3a;font-size:12px;line-height:16px;background:url(../images/ico/ico_pin.png) no-repeat right center;background-size:auto 16px;}
 
 
@@ -494,7 +497,7 @@ hr.line + .paging{margin-top:25px;}
 .main_banner li{position:relative;}
 .main_banner .img{position:absolute;left:0;top:0;right:0;bottom:0;background-repeat:no-repeat;background-position:center center;background-size:cover;}
 .main_banner .cont{position:relative;padding:170px 30px 0;height:667px;box-sizing:border-box;}
-.main_banner .tit{font-size:36px;font-weight:bold;}
+.main_banner .tit{font-size:36px;font-weight:bold;font-family:'Montserrat';}
 .main_banner .txt{font-size:15px;margin-top:15px;}
 .main_navi{position:absolute;top:315px;left:30px;right:30px;color:#fff;}
 .main_navi .counter{float:left;font-family: 'Montserrat';font-size:12px;}
@@ -506,7 +509,7 @@ hr.line + .paging{margin-top:25px;}
 .main_search_opt .dl{margin-top:35px;}
 .main_search_opt .search_input + .dl{margin-top:5px;}
 .main_cont{padding-top:50px;padding-bottom:50px;}
-.main_tit{position:relative;font-size:37px;z-index:2;line-height:1.2;}
+.main_tit{position:relative;font-size:37px;z-index:2;line-height:1.2;font-family:'Montserrat';}
 .main_tit2{position:relative;overflow:hidden;font-size:16px;margin:50px 0 15px;}
 .main_tit2 strong{position:relative;display:inline-block;}
 .main_tit2 strong:after{content:'';display:block;height:1px;position:absolute;left:100%;width:10000px;top:50%;background:#e5e5e5;transform:translateX(10px)}

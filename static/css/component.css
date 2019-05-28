@@ -89,7 +89,7 @@
 .checkbox input,
 .radio input{position:absolute;left:0;top:3px;width:12px;height:12px;z-index:1;opacity:0;margin:0;padding:0;}
 .checkbox input + i,
-.radio input + i{position:relative;top:3px;display:block;float:left;margin:0;width:12px;height:12px;border-radius:2px;overflow:hidden;background:#fff;border:1px solid #808080;border-radius:3px;-webkit-transition:border 0.3s;transition:border 0.3s;/*box-shadow:0 1px 2px rgba(0, 0, 0, 0.1);*/}
+.radio input + i{position:relative;top:2px;display:block;float:left;margin:0;width:12px;height:12px;border-radius:2px;overflow:hidden;background:#fff;border:1px solid #808080;border-radius:3px;-webkit-transition:border 0.3s;transition:border 0.3s;/*box-shadow:0 1px 2px rgba(0, 0, 0, 0.1);*/}
 .checkbox.type2 input + i,
 .radio input + i{border-radius:50%;}
 .checkbox input + i:after,
@@ -323,7 +323,7 @@ input:checked + .btn_radio,
 .btn_radio.on{color:#fff;background:#d95047;border-color:#d95047;}
 input:checked + .btn_radio.type2, .btn_radio.type2.on{background:#f77b73;border-color:#f77b73;}
 input:checked + .btn_radio.type3, .btn_radio.type3.on{background:#808080;border-color:#808080;}
-input:checked + .btn_radio[class*=bg], .btn_radio[class*=bg].on{border:0 none;line-height:33px;padding:0 16px;background-repeat:no-repeat;background-position:center center;background-size:cover;}
+input:checked + .btn_radio[class*=bg], .btn_radio[class*=bg].on{border:0 none;line-height:33px;padding:0 16px;background-color:transparent;background-repeat:no-repeat;background-position:center center;background-size:cover;}
 input:checked + .btn_radio.bg1, .btn_radio.bg1.on{background-image:url(../images/contents/rdo_paint_type1.png);}
 input:checked + .btn_radio.bg2, .btn_radio.bg2.on{background-image:url(../images/contents/rdo_paint_type2.png);}
 input:checked + .btn_radio.bg3, .btn_radio.bg3.on{background-image:url(../images/contents/rdo_paint_type3.png);}
@@ -465,7 +465,7 @@ input:checked + .btn_radio.bg14, .btn_radio.bg14.on{background-image:url(../imag
 .paging .btn.btn_last span {background-image: url(../images/common/paging_last.png);}
 .paging>span {display: inline-block;}
 .paging>span a {margin: 0 1px;color:#b2b2b2;}
-.paging>span strong {color:#222}
+.paging>span strong {color:#222;font-weight:normal;}
 
 /* loading */
 .pre_loading{position:fixed;left:-9999px;top:-9999px;width:0;height:0;z-index:-1;opacity:0;overflow:hidden;}
