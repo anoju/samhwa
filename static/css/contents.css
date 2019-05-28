@@ -148,7 +148,7 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
 .idea_area li h3 {padding-top: 20px;font-size: 18px; color: #404040; height:70px;display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;text-overflow:ellipsis;}
 
 /* 삼화앤피플 */
-.apply_letter_area {padding: 30px 0;position:relative;}
+.apply_letter_area {padding: 30px 13px;position:relative;}
 .apply_letter_area p {position:absolute;top:45px;right:45px;color: #404040; }
 .apply_letter_area p:before {content:"";display: inline-block; width: 22px; height:16px;background: url(../images/ico/ico_apply.png) 0 0 no-repeat;background-size: cover;margin-right: 15px;vertical-align:-2px;}
 .people_area ul {padding-top: 20px;}
@@ -279,9 +279,9 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
 .col_design_ct_intro dl dt {font-size: 18px; color: #404040;padding-bottom: 10px;}
 .col_design_ct_intro dl dd {margin-bottom: 40px;}
 .col_design_ct_intro dl dd:last-child {margin: 0;}
-.col_design_ct_intro h5 {font-size: 36px;color: #404040;font-weight: 800;margin: 60px 0 40px; position:relative;}
+.col_design_ct_intro h5 {font-size: 36px;color: #404040;font-weight: 800;margin: 60px 0 40px; position:relative;font-family:'Montserrat';line-height:1.1;}
 .col_design_ct_intro h5 span {position:relative;z-index: 1;background:#f5f5f5 ;padding-right: 18px;}
-.col_design_ct_intro h5:after {content:"";display: block;width: 100%; height:2px; background: #404040;position:absolute;bottom:22px; right:0;;}
+.col_design_ct_intro h5:after {content:"";display: block;width: 100%; height:2px; background: #404040;position:absolute;bottom:18px; right:0;;}
 .col_design_ct_intro ul li + li {margin-top: 30px;}
 .col_design_ct_intro ul li {padding-left:45px;position:relative;}
 .col_design_ct_intro ul li:before {position:absolute;top:5px;left:0; content:""; display: block;width:35px; height:35px; background: url(../images/contents/ico_scd_01.png)0 0 no-repeat; background-size:cover;}
@@ -351,12 +351,11 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
 .cr_case_wrap li h3 {position: absolute;top:30px;left:30px;color: #fff;font-size: 20px;z-index: 2; border-bottom:1px solid #fff;}
 .cr_case_wrap li .txt_box {background: #fff;padding:30px;}
 .cr_case_wrap li h4 {font-size: 18px;margin-bottom: 20px;word-break:break-all;}
-.cr_case_wrap li p {padding-bottom: 20px;word-break:break-all;}
-.cr_case_wrap .button {padding-right:40px;}
-.cr_case_wrap .button:after {content:"";display: block;background: url(../images/ico/ico_arrow.png) 0 0 no-repeat;width:16px; height:5px;position:absolute;top:15px;right:15px;}
+.cr_case_wrap li p {word-break:break-all;}
+.cr_case_wrap > .button{position:fixed;right:15px;top:50%;margin-top:-35px;padding:12px 40px 12px 15px;line-height:1.6;font-size:14px;}
+.cr_case_wrap > .button:after{content:"";display:block;background: url(../images/ico/ico_arrow.png) 0 0 no-repeat;background-size:contain;width:16px; height:5px;position:absolute;bottom:18px;right:15px;}
 
 /* 시공사례 */
-.pop_cont .business_case_list {border-top: 1px solid #e6e6e6;}
 .business_case_list > li {padding:40px 0 ; border-bottom: 1px solid #e6e6e6;}
 .business_case_list > li:last-child {border:none;}
 .business_case_list > li h2 {font-size: 20px;padding-bottom: 20px;}
@@ -473,6 +472,13 @@ hr.line + .paging{margin-top:25px;}
 .location_list + .paging{margin-top:30px;}
 .btn_map{display:inline-block;padding-right:20px;color:#e20d3a;font-size:12px;line-height:16px;background:url(../images/ico/ico_pin.png) no-repeat right center;background-size:auto 16px;}
 
+.cr_case_view{border-top:1px solid #e6e6e6;padding-top:0;}
+.cr_case_view .fake_select{margin-bottom:20px;}
+.cr_case_view .ui-swiper{margin-bottom:30px;}
+.cr_case_view h2{font-size:28px;color:#404040;}
+.cr_case_view h3{padding:5px 0;font-size:18px;color:#404040;font-weight:bold;}
+.cr_case_view .list li{margin-top:15px;}
+.cr_case_view .list div{font-size:14px;color:#808080;line-height:1.6;}
 
 
 /* main */
@@ -489,6 +495,9 @@ hr.line + .paging{margin-top:25px;}
 .main #pageTop.visual{display:block;height:auto;padding:0;background-color:#fff;}
 .main #pageTop.visual > div{display:block;}
 .main #pageTop .main_search{position:relative;margin-top:-120px;padding:0 30px 55px;z-index:1;}
+.main #pageTop .tit_wrap{position:relative;line-height:1.2;padding-bottom:14px;}
+.main #pageTop .tit_wrap .icon{position:absolute;right:0;bottom:18px;left:190px;height:30px;background:url(../images/main/ico_search.png) no-repeat right center;background-size:contain;}
+.main #pageTop .tit_wrap .icon:before{content:'';display:block;position:absolute;left:0;right:50px;top:50%;height:1px;background:#fff;}
 .main_bg{position:absolute;left:0;top:0;width:100%;height:667px;}
 .main_bg.fixed{position:fixed;}
 .main_bg > div{position:absolute;left:0;top:0;width:100%;height:100%;background-repeat:no-repeat;background-position:center center;background-size:cover;opacity:0;transition:opacity 0.3s;}

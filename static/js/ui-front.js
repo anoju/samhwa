@@ -195,10 +195,11 @@ var headerUI = function(){
 				if($('body').hasClass('main')){
 					if($scrollTop > 0){
 						$('.main_bg').addClass('fixed');
-						var $height = $(window).height() * 0.6,
-							$opacity  = Math.max(0.2,Math.min(1,$scrollTop/$height)),
-							$opacity2  = 1- Math.max(0,Math.min(0.8,$scrollTop/$height));
+						var $height = $(window).height() * 0.65,
+							$opacity  = Math.max(0.5,Math.min(1,$scrollTop/$height)),
+							$opacity2  = 1 - Math.max(0,Math.min(0.9,$scrollTop/($height * 0.5)));
 						$('#pageTit').css('opacity',$opacity);
+						$('#pageTit').next().css('opacity',(1-$opacity));
 						$('.main_navi, .main_banner .cont').css('opacity',$opacity2);
 					}else{
 						$('.main_bg').removeClass('fixed');
@@ -507,8 +508,8 @@ var tabUI = function(){
 
 	$(document).on('click','.ui-tabmenu a',function(e) {
 		e.preventDefault();
+		var href = $(this).attr('href');
 		if(!$(this).parent().hasClass('on')){
-			var href = $(this).attr('href');
 			$(href).addClass('on').siblings('.tab_cont').removeClass('on');
 			$(this).prepend($onText).parent().addClass('active').siblings().removeClass('active').find('.blind').remove();
 		}
