@@ -361,7 +361,7 @@ span.date {color: #b2b2b2; font-size: 13px;font-family: 'Montserrat'}
 .business_case_list > li {padding:40px 0 ; border-bottom: 1px solid #e6e6e6;}
 .business_case_list > li:last-child {border:none;}
 .business_case_list > li h2 {font-size: 20px;padding-bottom: 20px;}
-.business_case_list > li h3 {font-size: 18px; padding:20px 0 ;font-weight: 400;}
+.business_case_list > li h3 {font-size: 18px; padding:20px 0 10px;font-weight: 400;}
 .business_case_list > li p {font-size: 14px; color: #808080;word-break:break-all;}
 .business_case_list > li img {width: 100%;}
 .business_case_list .ui-swiper li{height:225px;}
