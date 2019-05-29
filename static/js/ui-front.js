@@ -458,6 +458,7 @@ var multiSwiper = function (tar){
 			$sliders[i].swipeNext();
 		});
 	});
+	
 };
 
 /* btn */
@@ -563,7 +564,11 @@ var tabUI = function(){
 			$(swiper.wrapper).css('width',$width+5);
 		}
 	});
-
+	if($('.tabmenu').hasClass('color_lnb')){
+		var $ldx = $('.swiper-wrapper li.on').index();
+		//console.log($ldx)
+		tabSwiper.swipeTo($ldx)
+	}
 	$(window).load(function(){
 		var $href = location.href;
 
