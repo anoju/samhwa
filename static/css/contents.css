@@ -436,10 +436,11 @@ hr.line + .paging{margin-top:25px;}
 .video_img a:after{content:'';display:block;position:absolute;left:50%;top:50%;width:40px;height:40px;margin:-20px 0 0 -20px;background:url(../images/contents/ico_video.png) no-repeat;background-size:contain;}
 .video_img img{width:100%;}
 .sns_share{text-align:center;}
-.sns_share a{display:inline-block;padding:0 10px;margin:0 10px;font-size:14px;color:#404040;}
+.sns_share a{display:inline-block;padding:0 10px;min-width:68px;font-size:14px;color:#404040;}
 .sns_share a:before{content:'';display:block;height:31px;margin-bottom:17px;background-repeat:no-repeat;background-position:center center;background-size:contain;}
 .sns_share a.ic_kakao:before{background-image:url(../images/ico/share_kakao.png);}
 .sns_share a.ic_link:before{background-image:url(../images/ico/share_link.png);}
+.sns_share a.ic_sms:before{background-image:url(../images/ico/share_sms.png);}
 
 .data_tbl_wrap{position:relative;margin-top:35px;}
 .data_tbl_wrap + .paging{margin-top:30px;}
